@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbm5rysybkewt"
-path="res://.godot/imported/key.png-a184d7892a8c06d8525b25ada3d41fbd.ctex"
+path="res://.godot/imported/key.png-812c3ab6c29084800b6533ea3b3a8f72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Interactables/key.png"
-dest_files=["res://.godot/imported/key.png-a184d7892a8c06d8525b25ada3d41fbd.ctex"]
+source_file="res://Assets/Interactables/key.png"
+dest_files=["res://.godot/imported/key.png-812c3ab6c29084800b6533ea3b3a8f72.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u65b61aa4vf1"
-path="res://.godot/imported/background_sprite_1.png-8d40df3135121ca73ce835bc2f2eb552.ctex"
+path="res://.godot/imported/background_sprite_1.png-5b2e9cc84716429993ff441d7519872f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Environment/background_sprite_1.png"
-dest_files=["res://.godot/imported/background_sprite_1.png-8d40df3135121ca73ce835bc2f2eb552.ctex"]
+source_file="res://Assets/Environment/background_sprite_1.png"
+dest_files=["res://.godot/imported/background_sprite_1.png-5b2e9cc84716429993ff441d7519872f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3sqmt2s4r12n"
-path="res://.godot/imported/spikes_spritesheet.png-7ab6657b77d9eed53d8ccb8767995601.ctex"
+path="res://.godot/imported/spikes_spritesheet.png-d638264d666bd20fc1aeb7b3ac53ff8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Interactables/spikes_spritesheet.png"
-dest_files=["res://.godot/imported/spikes_spritesheet.png-7ab6657b77d9eed53d8ccb8767995601.ctex"]
+source_file="res://Assets/Interactables/spikes_spritesheet.png"
+dest_files=["res://.godot/imported/spikes_spritesheet.png-d638264d666bd20fc1aeb7b3ac53ff8b.ctex"]
 
 [params]
 

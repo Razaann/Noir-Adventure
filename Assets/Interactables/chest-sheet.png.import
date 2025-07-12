@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckqxr1rfysy2"
-path="res://.godot/imported/chest-sheet.png-aab821e87c9ff62450b8048581c6d33d.ctex"
+path="res://.godot/imported/chest-sheet.png-44f6bdc4cc6eef4406142e56ddba82d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Interactables/chest-sheet.png"
-dest_files=["res://.godot/imported/chest-sheet.png-aab821e87c9ff62450b8048581c6d33d.ctex"]
+source_file="res://Assets/Interactables/chest-sheet.png"
+dest_files=["res://.godot/imported/chest-sheet.png-44f6bdc4cc6eef4406142e56ddba82d6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl1h3nnd2tqtk"
-path="res://.godot/imported/enemy_rpg.png-5057b87dd6f24b2e7b13412314b6f1af.ctex"
+path="res://.godot/imported/enemy_rpg.png-263a8150ceb555bd4cac9206afccb139.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Enemies/enemy_rpg.png"
-dest_files=["res://.godot/imported/enemy_rpg.png-5057b87dd6f24b2e7b13412314b6f1af.ctex"]
+source_file="res://Assets/Enemies/enemy_rpg.png"
+dest_files=["res://.godot/imported/enemy_rpg.png-263a8150ceb555bd4cac9206afccb139.ctex"]
 
 [params]
 

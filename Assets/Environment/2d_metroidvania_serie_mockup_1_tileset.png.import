@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lli7ywafv15b"
-path="res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-b9dd02ebcfc535f30ee98f2acaaf7703.ctex"
+path="res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-f9385ecbbf93ec0b64a6a51511c4fd01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Environment/2d_metroidvania_serie_mockup_1_tileset.png"
-dest_files=["res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-b9dd02ebcfc535f30ee98f2acaaf7703.ctex"]
+source_file="res://Assets/Environment/2d_metroidvania_serie_mockup_1_tileset.png"
+dest_files=["res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-f9385ecbbf93ec0b64a6a51511c4fd01.ctex"]
 
 [params]
 

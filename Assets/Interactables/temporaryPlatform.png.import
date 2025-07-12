@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csqpimkwt4fx"
-path="res://.godot/imported/temporaryPlatform.png-3d5094bc665f31c28947bc78f71254a8.ctex"
+path="res://.godot/imported/temporaryPlatform.png-cc072d79d8e5a9f9de5d38eb548b47a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/Interactables/temporaryPlatform.png"
-dest_files=["res://.godot/imported/temporaryPlatform.png-3d5094bc665f31c28947bc78f71254a8.ctex"]
+source_file="res://Assets/Interactables/temporaryPlatform.png"
+dest_files=["res://.godot/imported/temporaryPlatform.png-cc072d79d8e5a9f9de5d38eb548b47a8.ctex"]
 
 [params]
 

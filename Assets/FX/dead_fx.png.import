@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://degcsgm3ocqmr"
-path="res://.godot/imported/dead_fx.png-5bed11ee7b0c4a908a89e6bd20357a41.ctex"
+path="res://.godot/imported/dead_fx.png-d7870230604ba8f6fee45745be6faed9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/FX/dead_fx.png"
-dest_files=["res://.godot/imported/dead_fx.png-5bed11ee7b0c4a908a89e6bd20357a41.ctex"]
+source_file="res://Assets/FX/dead_fx.png"
+dest_files=["res://.godot/imported/dead_fx.png-d7870230604ba8f6fee45745be6faed9.ctex"]
 
 [params]
 

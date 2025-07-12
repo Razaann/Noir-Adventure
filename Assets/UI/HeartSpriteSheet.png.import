@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://comm5mlvuuoct"
-path="res://.godot/imported/HeartSpriteSheet.png-2aef618786b4d312507b024db49a6a91.ctex"
+path="res://.godot/imported/HeartSpriteSheet.png-2e2a4553f4c9353bfe4c1fbe940c45ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d_metroid_asset_1_2/UI/HeartSpriteSheet.png"
-dest_files=["res://.godot/imported/HeartSpriteSheet.png-2aef618786b4d312507b024db49a6a91.ctex"]
+source_file="res://Assets/UI/HeartSpriteSheet.png"
+dest_files=["res://.godot/imported/HeartSpriteSheet.png-2e2a4553f4c9353bfe4c1fbe940c45ab.ctex"]
 
 [params]
 
