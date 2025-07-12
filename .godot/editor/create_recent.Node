@@ -1,0 +1,11 @@
+RayCast2D
+AnimatedSprite2D
+AnimatableBody2D
+CollisionShape2D
+CharacterBody2D
+Sprite2D
+Timer
+Area2D
+TileMap
+Camera2D
+StaticBody2D
