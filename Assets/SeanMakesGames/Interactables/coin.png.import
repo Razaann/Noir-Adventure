@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lli7ywafv15b"
-path="res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-f9385ecbbf93ec0b64a6a51511c4fd01.ctex"
+uid="uid://dbm6tt4l35265"
+path="res://.godot/imported/coin.png-bc4c98c333777d478b8104da85718eb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/2d_metroidvania_serie_mockup_1_tileset.png"
-dest_files=["res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-f9385ecbbf93ec0b64a6a51511c4fd01.ctex"]
+source_file="res://Assets/SeanMakesGames/Interactables/coin.png"
+dest_files=["res://.godot/imported/coin.png-bc4c98c333777d478b8104da85718eb0.ctex"]
 
 [params]
 

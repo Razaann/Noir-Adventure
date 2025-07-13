@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3sqmt2s4r12n"
-path="res://.godot/imported/spikes_spritesheet.png-d638264d666bd20fc1aeb7b3ac53ff8b.ctex"
+uid="uid://csqpimkwt4fx"
+path="res://.godot/imported/temporaryPlatform.png-dafd52164219221e5ebf4ee673741230.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interactables/spikes_spritesheet.png"
-dest_files=["res://.godot/imported/spikes_spritesheet.png-d638264d666bd20fc1aeb7b3ac53ff8b.ctex"]
+source_file="res://Assets/SeanMakesGames/Interactables/temporaryPlatform.png"
+dest_files=["res://.godot/imported/temporaryPlatform.png-dafd52164219221e5ebf4ee673741230.ctex"]
 
 [params]
 

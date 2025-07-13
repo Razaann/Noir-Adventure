@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbm6tt4l35265"
-path="res://.godot/imported/coin.png-64b7ac55aaede0a017c2e764218e604e.ctex"
+uid="uid://b6ym62g83578h"
+path="res://.godot/imported/JumpPowerUp.png-f7a9c040c22addee7b374f7d69fb6957.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interactables/coin.png"
-dest_files=["res://.godot/imported/coin.png-64b7ac55aaede0a017c2e764218e604e.ctex"]
+source_file="res://Assets/SeanMakesGames/Interactables/JumpPowerUp.png"
+dest_files=["res://.godot/imported/JumpPowerUp.png-f7a9c040c22addee7b374f7d69fb6957.ctex"]
 
 [params]
 

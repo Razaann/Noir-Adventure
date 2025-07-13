@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxdugql7wf3el"]
+[gd_scene load_steps=13 format=3 uid="uid://cxdugql7wf3el"]
 
 [ext_resource type="Texture2D" uid="uid://cmcy0awjq86ts" path="res://Assets/1bit adventure/Enemies/Slime_enemy/slime.png" id="1_371uh"]
 [ext_resource type="Script" uid="uid://dt5uyneci62f4" path="res://codes/slime.gd" id="1_p2gj0"]
-[ext_resource type="AudioStream" uid="uid://c3r3bkgqw4405" path="res://Assets/Sfx/explosion.wav" id="3_n6pvg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2gj0"]
 atlas = ExtResource("1_371uh")
@@ -53,7 +52,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 8.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -98,6 +97,3 @@ target_position = Vector2(9, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
 target_position = Vector2(-9, 0)
-
-[node name="DeathSfx" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_n6pvg")

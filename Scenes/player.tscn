@@ -1,7 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://crkc3fvq7dy6f"]
+[gd_scene load_steps=26 format=3 uid="uid://crkc3fvq7dy6f"]
 
-[ext_resource type="Texture2D" uid="uid://cvweo7yhfr401" path="res://assets/1bit adventure/Player/player.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://cvweo7yhfr401" path="res://Assets/1bit adventure/Player/player.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c3bo8twqm8uwc" path="res://codes/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://ccwsgtcslfbk" path="res://Assets/Sfx/hurt.wav" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://dw2kshvvhsels" path="res://Assets/Sfx/jump.wav" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("1_3vyb7")
@@ -161,18 +163,31 @@ height = 20.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_x5gf8")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
 shape = SubResource("CapsuleShape2D_42hdn")
+debug_color = Color(0.527696, 0.571679, 0.0278515, 0.42)
 
 [node name="Sword" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_y4r1p")
+disabled = true
+debug_color = Color(3.22476e-06, 0.643625, 0.296546, 0.42)
+
+[node name="AttackSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qhqgy")
+
+[node name="JumpSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dqkch")
+
+[connection signal="body_entered" from="Sword" to="." method="_on_sword_body_entered"]

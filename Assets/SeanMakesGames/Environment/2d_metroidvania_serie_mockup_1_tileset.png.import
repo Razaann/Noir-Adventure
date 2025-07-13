@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl1h3nnd2tqtk"
-path="res://.godot/imported/enemy_rpg.png-263a8150ceb555bd4cac9206afccb139.ctex"
+uid="uid://lli7ywafv15b"
+path="res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-cab3de381f168b484fb7873dc24b02b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/enemy_rpg.png"
-dest_files=["res://.godot/imported/enemy_rpg.png-263a8150ceb555bd4cac9206afccb139.ctex"]
+source_file="res://Assets/SeanMakesGames/Environment/2d_metroidvania_serie_mockup_1_tileset.png"
+dest_files=["res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-cab3de381f168b484fb7873dc24b02b1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u65b61aa4vf1"
-path="res://.godot/imported/background_sprite_1.png-5b2e9cc84716429993ff441d7519872f.ctex"
+uid="uid://dout48c2r8tko"
+path="res://.godot/imported/Player_metroid.png-0d28c965318c01af3574092c7f57cffd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/background_sprite_1.png"
-dest_files=["res://.godot/imported/background_sprite_1.png-5b2e9cc84716429993ff441d7519872f.ctex"]
+source_file="res://Assets/SeanMakesGames/Player/Player_metroid.png"
+dest_files=["res://.godot/imported/Player_metroid.png-0d28c965318c01af3574092c7f57cffd.ctex"]
 
 [params]
 

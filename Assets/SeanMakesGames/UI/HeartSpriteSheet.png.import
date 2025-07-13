@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csqpimkwt4fx"
-path="res://.godot/imported/temporaryPlatform.png-cc072d79d8e5a9f9de5d38eb548b47a8.ctex"
+uid="uid://comm5mlvuuoct"
+path="res://.godot/imported/HeartSpriteSheet.png-b8f80fb8efc2a6be80827540f48f7bd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interactables/temporaryPlatform.png"
-dest_files=["res://.godot/imported/temporaryPlatform.png-cc072d79d8e5a9f9de5d38eb548b47a8.ctex"]
+source_file="res://Assets/SeanMakesGames/UI/HeartSpriteSheet.png"
+dest_files=["res://.godot/imported/HeartSpriteSheet.png-b8f80fb8efc2a6be80827540f48f7bd1.ctex"]
 
 [params]
 

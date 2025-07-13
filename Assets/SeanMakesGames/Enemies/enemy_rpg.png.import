@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd6s75uw26xei"
-path="res://.godot/imported/background_sprite_2.png-609bc58aff07fb75ef2e1f1c8957a0f2.ctex"
+uid="uid://dl1h3nnd2tqtk"
+path="res://.godot/imported/enemy_rpg.png-0416cd35e169741cd9583214c9cbc38e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/background_sprite_2.png"
-dest_files=["res://.godot/imported/background_sprite_2.png-609bc58aff07fb75ef2e1f1c8957a0f2.ctex"]
+source_file="res://Assets/SeanMakesGames/Enemies/enemy_rpg.png"
+dest_files=["res://.godot/imported/enemy_rpg.png-0416cd35e169741cd9583214c9cbc38e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j4dl0afg44h2"
-path="res://.godot/imported/LanternW3.png-34bb21e3eac91b22fc57296f14185607.ctex"
+uid="uid://degcsgm3ocqmr"
+path="res://.godot/imported/dead_fx.png-bdb761345d1eb1ba0aeba439826fe8dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interactables/LanternW3.png"
-dest_files=["res://.godot/imported/LanternW3.png-34bb21e3eac91b22fc57296f14185607.ctex"]
+source_file="res://Assets/SeanMakesGames/FX/dead_fx.png"
+dest_files=["res://.godot/imported/dead_fx.png-bdb761345d1eb1ba0aeba439826fe8dd.ctex"]
 
 [params]
 

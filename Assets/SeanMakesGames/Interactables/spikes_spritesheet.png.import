@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://comm5mlvuuoct"
-path="res://.godot/imported/HeartSpriteSheet.png-2e2a4553f4c9353bfe4c1fbe940c45ab.ctex"
+uid="uid://3sqmt2s4r12n"
+path="res://.godot/imported/spikes_spritesheet.png-3fe4949663996aa7a1f95dd5a6ee23e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/HeartSpriteSheet.png"
-dest_files=["res://.godot/imported/HeartSpriteSheet.png-2e2a4553f4c9353bfe4c1fbe940c45ab.ctex"]
+source_file="res://Assets/SeanMakesGames/Interactables/spikes_spritesheet.png"
+dest_files=["res://.godot/imported/spikes_spritesheet.png-3fe4949663996aa7a1f95dd5a6ee23e7.ctex"]
 
 [params]
 

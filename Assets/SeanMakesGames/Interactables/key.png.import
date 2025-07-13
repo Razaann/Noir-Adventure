@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://degcsgm3ocqmr"
-path="res://.godot/imported/dead_fx.png-d7870230604ba8f6fee45745be6faed9.ctex"
+uid="uid://bbm5rysybkewt"
+path="res://.godot/imported/key.png-6b50a9ab8afdadcaad69b5d4ee71641d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FX/dead_fx.png"
-dest_files=["res://.godot/imported/dead_fx.png-d7870230604ba8f6fee45745be6faed9.ctex"]
+source_file="res://Assets/SeanMakesGames/Interactables/key.png"
+dest_files=["res://.godot/imported/key.png-6b50a9ab8afdadcaad69b5d4ee71641d.ctex"]
 
 [params]
 

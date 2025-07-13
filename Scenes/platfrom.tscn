@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csqc3dmvuhadp"]
 
-[ext_resource type="Texture2D" uid="uid://bq6d1gmjvd34h" path="res://assets/1 bit kenney/monochrome_tilemap_transparent_packed.png" id="1_5o4k7"]
+[ext_resource type="Texture2D" uid="uid://bq6d1gmjvd34h" path="res://Assets/1 bit kenney/monochrome_tilemap_transparent_packed.png" id="1_5o4k7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ru3px"]
 size = Vector2(48, 8)

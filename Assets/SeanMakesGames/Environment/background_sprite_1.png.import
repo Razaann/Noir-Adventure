@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ym62g83578h"
-path="res://.godot/imported/JumpPowerUp.png-f05ac4d90b9f2c3cf0dca8eee2d3cd23.ctex"
+uid="uid://u65b61aa4vf1"
+path="res://.godot/imported/background_sprite_1.png-a4e535a001916135177f552e98b33510.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interactables/JumpPowerUp.png"
-dest_files=["res://.godot/imported/JumpPowerUp.png-f05ac4d90b9f2c3cf0dca8eee2d3cd23.ctex"]
+source_file="res://Assets/SeanMakesGames/Environment/background_sprite_1.png"
+dest_files=["res://.godot/imported/background_sprite_1.png-a4e535a001916135177f552e98b33510.ctex"]
 
 [params]
 
