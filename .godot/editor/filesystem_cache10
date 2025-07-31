@@ -1,76 +1,153 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1752414850
-export_presets.cfg::TextFile/TextFile::-1::1751568692::0::1::::<><><>0<>0<><>::
-icon.svg::CompressedTexture2D/CompressedTexture2D::6706084880785418875::1751535653::1751551905::1::::<><><>0<>0<>e7fa77c4cc28b2535d69ce4ae9d7bf91<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Assets/::1752415598
-::res://Assets/1 bit kenney/::1752323160
-monochrome_tilemap.png::CompressedTexture2D/CompressedTexture2D::1806377329267777170::1635878780::1752323160::1::::<><><>0<>0<>ed3ff8a22a59e86b1cef71f9d4cb2410<>res://.godot/imported/monochrome_tilemap.png-839497d9b6cc00a343e2580791c8d974.ctex::
-monochrome_tilemap_packed.png::CompressedTexture2D/CompressedTexture2D::3578326897883478501::1635878781::1752323160::1::::<><><>0<>0<>12d05b87f56b0ab8f701048cb5c0611d<>res://.godot/imported/monochrome_tilemap_packed.png-e5daf3dbf9005a8d629905d1b25396dd.ctex::
-monochrome_tilemap_transparent.png::CompressedTexture2D/CompressedTexture2D::8028574505581611067::1635878781::1752323160::1::::<><><>0<>0<>091e4653c56323d20e696cdc3c8aa336<>res://.godot/imported/monochrome_tilemap_transparent.png-02b9ccc1df6d8061fbe3fd262be7e1c2.ctex::
-monochrome_tilemap_transparent_packed.png::CompressedTexture2D/CompressedTexture2D::3573666808012185945::1635878781::1752323160::1::::<><><>0<>0<>dbff703e532bd7d28abd51ce18381924<>res://.godot/imported/monochrome_tilemap_transparent_packed.png-97bd19cedd0b6fb21ac0dbbfa23ae43c.ctex::
-::res://Assets/1-Bit_Caves_Omniclause/::1752323160
-1-bit_tileset_solid_background.png::CompressedTexture2D/CompressedTexture2D::864511740015590720::1751552580::1752323160::1::::<><><>0<>0<>8646e2f1630a454fe082adb627506e15<>res://.godot/imported/1-bit_tileset_solid_background.png-97dcb897cdf1a0aa3fdac26540a81fa7.ctex::
-1-bit_tileset_transparent_background.png::CompressedTexture2D/CompressedTexture2D::5981369811130148159::1751454555::1752323160::1::::<><><>0<>0<>c62f4062313f033f2453742364ebb93a<>res://.godot/imported/1-bit_tileset_transparent_background.png-f27fbf7ddc958b4f3f5490dec5d8f56d.ctex::
-Example.png::CompressedTexture2D/CompressedTexture2D::1972407465589207368::1751454555::1752323160::1::::<><><>0<>0<>7f24523c0dbb898c2ea122d1f66cd6fe<>res://.godot/imported/Example.png-64aa05367e0dd5905682c04a0c364937.ctex::
-::res://Assets/1bit adventure/::1752323021
-::res://Assets/1bit adventure/Enemies/::1752323095
-::res://Assets/1bit adventure/Enemies/Bat_enemy/::1752323160
-bat_enemy.png::CompressedTexture2D/CompressedTexture2D::2396829105569696030::1751372390::1752323160::1::::<><><>0<>0<>341925d67f5058cc761ee4dcffa7651b<>res://.godot/imported/bat_enemy.png-232c6037f0dab13a5e22223bbd5a62c3.ctex::
-::res://Assets/1bit adventure/Enemies/Eye_enemy/::1752323160
-eye_enemy.png::CompressedTexture2D/CompressedTexture2D::4326745307980857936::1751372390::1752323160::1::::<><><>0<>0<>11259bf251a618da3a4b8db783243a97<>res://.godot/imported/eye_enemy.png-eef81a5942db97d7af1675ffd17792f4.ctex::
-::res://Assets/1bit adventure/Enemies/Skeleton_enemy/::1752323160
-skeleton_enemy.png::CompressedTexture2D/CompressedTexture2D::6257708012251461243::1751372390::1752323160::1::::<><><>0<>0<>6c0c1cb18ac5652b59f9567fafea0599<>res://.godot/imported/skeleton_enemy.png-6d720b46ed8902cc3f7d96165660d651.ctex::
-::res://Assets/1bit adventure/Enemies/Slime_enemy/::1752323160
-slime.png::CompressedTexture2D/CompressedTexture2D::5620738133642058684::1752070073::1752323160::1::::<><><>0<>0<>f3c65cf967b44c3f82f79323449a3f4b<>res://.godot/imported/slime.png-618939603877fec71dfb6f972c4a7db5.ctex::
-::res://Assets/1bit adventure/Items/::1752323160
-coin1.png::CompressedTexture2D/CompressedTexture2D::5566470637503596293::1751372390::1752323160::1::::<><><>0<>0<>2dcd1f35fc79f25545e9ff678111d52a<>res://.godot/imported/coin1.png-3ce50e2c0fbc602399341e95751010e3.ctex::
-coin2.png::CompressedTexture2D/CompressedTexture2D::7739116235998436604::1751372390::1752323160::1::::<><><>0<>0<>0ab0fbaf4359311c6aeeef0c3dfa4023<>res://.godot/imported/coin2.png-7a23ccadc84615168f3cc3fc52029962.ctex::
-potion1.png::CompressedTexture2D/CompressedTexture2D::2208936277499337855::1751372390::1752323160::1::::<><><>0<>0<>fb31d0bc63c4892d440b3106d4865224<>res://.godot/imported/potion1.png-b2a5aa4ac48d46c6c3e36a60faf6b6f1.ctex::
-potion2.png::CompressedTexture2D/CompressedTexture2D::3196248253771030556::1751372390::1752323160::1::::<><><>0<>0<>b94abb37765016c5b47c2a8ac8760575<>res://.godot/imported/potion2.png-9044bd6c413bf69affce1d2b77b82841.ctex::
-::res://Assets/1bit adventure/Player/::1752323160
-player.png::CompressedTexture2D/CompressedTexture2D::6292492981607874456::1752044710::1752323160::1::::<><><>0<>0<>76dec186834e83311af26a91ec896c22<>res://.godot/imported/player.png-02e4b6e80eaaf95d3dbad4cccf216096.ctex::
-::res://Assets/1bit adventure/Tiles/::1752323160
-platform_tiles.png::CompressedTexture2D/CompressedTexture2D::7479256769797886548::1751372390::1752323160::1::::<><><>0<>0<>d9d3e03bd98307efdba4a0a94db74647<>res://.godot/imported/platform_tiles.png-9f8a5df5523101f4dc1d90084fa6e6e5.ctex::
-tilemap.png::CompressedTexture2D/CompressedTexture2D::6455129578490726280::1751372390::1752323160::1::::<><><>0<>0<>a594718a8d2e818034f8c5d383662f66<>res://.godot/imported/tilemap.png-bc6156432ebdffde01c26e058ca62432.ctex::
-tilemap_guide.png::CompressedTexture2D/CompressedTexture2D::5366411758447937378::1751372390::1752323160::1::::<><><>0<>0<>29f9af7d7d7c50a2c7246047a971e9d1<>res://.godot/imported/tilemap_guide.png-9a3d04d13f998fc3747f8410c0502d97.ctex::
-water_tile.png::CompressedTexture2D/CompressedTexture2D::3861366875935259168::1751372390::1752323160::1::::<><><>0<>0<>46d62df4fee72fbeb9cb1d76fc20db7e<>res://.godot/imported/water_tile.png-70d32a8e51ad7be3b73a8b449e6da04a.ctex::
-::res://Assets/SeanMakesGames/::1752415598
-::res://Assets/SeanMakesGames/Enemies/::1752415603
-enemy_rpg.png::CompressedTexture2D::7985488876941078456::1752321740::1752415603::1::::<><><>0<>0<>d948dbbaaf81b8d083ccb44280236c6e<>res://.godot/imported/enemy_rpg.png-0416cd35e169741cd9583214c9cbc38e.ctex::
-::res://Assets/SeanMakesGames/Environment/::1752415603
-2d_metroidvania_serie_mockup_1_tileset.png::CompressedTexture2D::795329611213740893::1752321740::1752415603::1::::<><><>0<>0<>910e1194930042abef6826a7199d95d6<>res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-cab3de381f168b484fb7873dc24b02b1.ctex::
-background_sprite_1.png::CompressedTexture2D::1469597547103333120::1752321740::1752415603::1::::<><><>0<>0<>b22c1678ca5ec40d3662790cb53e54b6<>res://.godot/imported/background_sprite_1.png-a4e535a001916135177f552e98b33510.ctex::
-background_sprite_2.png::CompressedTexture2D::7434975951277504596::1752321740::1752415603::1::::<><><>0<>0<>e0032b3146b94f8b3ed69da4673800e5<>res://.godot/imported/background_sprite_2.png-a442f9a96ba47d5633572a0999265296.ctex::
-::res://Assets/SeanMakesGames/FX/::1752415602
-dead_fx.png::CompressedTexture2D::7452557605400364377::1752321740::1752415602::1::::<><><>0<>0<>2ac7fa96c1be8b89ea30fb11b6a23888<>res://.godot/imported/dead_fx.png-bdb761345d1eb1ba0aeba439826fe8dd.ctex::
-::res://Assets/SeanMakesGames/Interactables/::1752415602
-chest-sheet.png::CompressedTexture2D::162034943802654659::1752321740::1752415602::1::::<><><>0<>0<>0d0529620fc15de66acdb88c900b8b39<>res://.godot/imported/chest-sheet.png-3030814057b1786f45fd21232ebd7b7a.ctex::
-coin.png::CompressedTexture2D::7256140627907405560::1752321740::1752415602::1::::<><><>0<>0<>8d616de3a1e4de5faa428075a394f58d<>res://.godot/imported/coin.png-bc4c98c333777d478b8104da85718eb0.ctex::
-Crate-animated.png::CompressedTexture2D::3841214257859106325::1752321740::1752415602::1::::<><><>0<>0<>eb0e923b96b945c66e3f2faef7df4ef0<>res://.godot/imported/Crate-animated.png-461bc3f97654f88d07a8b5aa621115c0.ctex::
-JumpPowerUp.png::CompressedTexture2D::4612605295031072953::1752321740::1752415602::1::::<><><>0<>0<>07aead13acde0008495d985b3d823844<>res://.godot/imported/JumpPowerUp.png-f7a9c040c22addee7b374f7d69fb6957.ctex::
-key.png::CompressedTexture2D::2483235218118295791::1752321740::1752415602::1::::<><><>0<>0<>9c554f74c7e4fac2477a0aa8636435a0<>res://.godot/imported/key.png-6b50a9ab8afdadcaad69b5d4ee71641d.ctex::
-Lamp.png::CompressedTexture2D::5402954231543104118::1752321740::1752415602::1::::<><><>0<>0<>16107e06da0a92c0332668f97b56eb03<>res://.godot/imported/Lamp.png-3627bf1e32a3a7fa6b1fa68772e37693.ctex::
-LanternW3.png::CompressedTexture2D::691769655641400549::1752321740::1752415602::1::::<><><>0<>0<>777698a10641ee74c50e9b32dda0405d<>res://.godot/imported/LanternW3.png-2d62387703443bd831f2c6b28779fd8f.ctex::
-spikes_spritesheet.png::CompressedTexture2D::2003440363359767395::1752321740::1752415602::1::::<><><>0<>0<>b2c50be63ca9fb85308b18c212883ab1<>res://.godot/imported/spikes_spritesheet.png-3fe4949663996aa7a1f95dd5a6ee23e7.ctex::
-temporaryPlatform.png::CompressedTexture2D::178535184850965869::1752321740::1752415602::1::::<><><>0<>0<>80cba5bf6d1589e54e33aa6351e04da0<>res://.godot/imported/temporaryPlatform.png-dafd52164219221e5ebf4ee673741230.ctex::
-::res://Assets/SeanMakesGames/Player/::1752415602
-Player_metroid.png::CompressedTexture2D::8184400565589713958::1752321740::1752415602::1::::<><><>0<>0<>1ed7f43f0b8b1d795da3ce3c8c568412<>res://.godot/imported/Player_metroid.png-0d28c965318c01af3574092c7f57cffd.ctex::
-::res://Assets/SeanMakesGames/UI/::1752415602
-HeartSpriteSheet.png::CompressedTexture2D::5781040537352440527::1752321740::1752415602::1::::<><><>0<>0<>8fe76a052d259f0c37793f73e6aa26dd<>res://.godot/imported/HeartSpriteSheet.png-b8f80fb8efc2a6be80827540f48f7bd1.ctex::
-::res://Assets/Sfx/::1752415748
-coin.wav::AudioStreamWAV::7847173709064450326::1749424313::1752415603::1::::<><><>0<>0<>9edfa96cce02945228cd12cb181db572<>res://.godot/imported/coin.wav-0b136229f0f6b013f90968205319c647.sample::
-explosion.wav::AudioStreamWAV::6774925807921359276::1749424313::1752415750::1::::<><><>0<>0<>7f6b0eadd406b9cb84d6f1f783919d01<>res://.godot/imported/explosion.wav-5378eb6f630e7a782b389bc8d780ef3c.sample::
-hurt.wav::AudioStreamWAV::145874705522082488::1749424313::1752415603::1::::<><><>0<>0<>f7fbfccb44d19546b6f33f3adee9460e<>res://.godot/imported/hurt.wav-92180733c49256f9feb244e45999574d.sample::
-jump.wav::AudioStreamWAV::8759794525762136824::1749424313::1752415603::1::::<><><>0<>0<>fa609051c3a8bcf39e43ca7dc5e98fb0<>res://.godot/imported/jump.wav-58483fbccd51855a8c9f993593472941.sample::
-::res://codes/::1752415693
-killzone.gd::GDScript/GDScript::2077608491172903785::1752059386::0::1::::<>Area2D<><>0<>0<><>::
-player.gd::GDScript::6741103368776434310::1752382017::0::1::::<>CharacterBody2D<><>0<>0<><>::
-slime.gd::GDScript::8556039300818339435::1752415693::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://Scenes/::1752415695
-game.tscn::PackedScene::4216062966446571189::1752415695::0::1::::<><><>0<>0<><>::uid://cx76bnpquwvs7::::res://Assets/1bit adventure/Tiles/tilemap.png<>uid://bq6d1gmjvd34h::::res://Assets/1 bit kenney/monochrome_tilemap_transparent_packed.png<>uid://mk1m8we6kd41::::res://Assets/1-Bit_Caves_Omniclause/1-bit_tileset_solid_background.png<>uid://crkc3fvq7dy6f::::res://Scenes/player.tscn<>uid://iviiw2fy5ape::::res://Scenes/killzone.tscn<>uid://csqc3dmvuhadp::::res://Scenes/platfrom.tscn<>uid://cxdugql7wf3el::::res://Scenes/slime.tscn
-killzone.tscn::PackedScene::605363901716736466::1752415695::0::1::::<><><>0<>0<><>::uid://4un55advt7xt::::res://codes/killzone.gd
-platfrom.tscn::PackedScene::6069442210239460749::1752415695::0::1::::<><><>0<>0<><>::uid://bq6d1gmjvd34h::::res://Assets/1 bit kenney/monochrome_tilemap_transparent_packed.png
-player.tscn::PackedScene::5986867218815740123::1752415695::0::1::::<><><>0<>0<><>::uid://cvweo7yhfr401::::res://Assets/1bit adventure/Player/player.png<>uid://c3bo8twqm8uwc::::res://codes/player.gd
-slime.tscn::PackedScene::6394603817791897803::1752415695::0::1::::<><><>0<>0<><>::uid://cmcy0awjq86ts::::res://Assets/1bit adventure/Enemies/Slime_enemy/slime.png<>uid://dt5uyneci62f4::::res://codes/slime.gd<>uid://ccwsgtcslfbk::::res://Assets/Sfx/hurt.wav
-::res://Scenes/Player/::1752321740
-player.tscn::PackedScene/PackedScene::3342865616751984571::1752321740::0::1::::<><><>0<>0<><>::uid://dout48c2r8tko::::res://2d_metroid_asset_1_2/Player/Player_metroid.png
+::res://::1754001989
+icon.svg::CompressedTexture2D/CompressedTexture2D::9053740235931686459::1752752794::1753098332::1::::<><><>0<>0<>b1e2fa090e551dd0e16528f9195c9bda<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Assets/::1753800897
+::res://Assets/Sound/::1753800897
+coin.wav::AudioStreamWAV/AudioStreamWAV::7847173709064450326::1749424313::1753336949::1::::<><><>0<>0<>f2bd0181f2385dee54789e9a07c38d95<>res://.godot/imported/coin.wav-5d458019079aefcd8638d3071c6a012b.sample::
+explosion.wav::AudioStreamWAV/AudioStreamWAV::6774925807921359276::1749424313::1753336949::1::::<><><>0<>0<>ac3869efcbc0939bc0f51314922f1ad7<>res://.godot/imported/explosion.wav-61739d31e2f6159a680a7e1d7b800070.sample::
+hurt.wav::AudioStreamWAV/AudioStreamWAV::145874705522082488::1749424313::1753336949::1::::<><><>0<>0<>2a2402b38d0c71b3494189a4ecb4edf3<>res://.godot/imported/hurt.wav-8e8d5b790a6c7f0f916e4941ff207485.sample::
+jump.wav::AudioStreamWAV/AudioStreamWAV::8759794525762136824::1749424313::1753336949::1::::<><><>0<>0<>9073216ab7bc1dd91f765aa2cb009db5<>res://.godot/imported/jump.wav-56672e0595b19ad2ec40544f2e0f4eec.sample::
+Retro Impact Punch 07.wav::AudioStreamWAV/AudioStreamWAV::6750857289164607623::1753336860::1753336949::1::::<><><>0<>0<>6e933615b74fed0b0cb59297c8a3e223<>res://.godot/imported/Retro Impact Punch 07.wav-daf2effe4e81d07a8b5ec5541741d2c3.sample::
+::res://Assets/Sound/Bounce Jump/::1753800896
+Retro Jump 01.wav::AudioStreamWAV/AudioStreamWAV::2096320024158002261::1753336494::1753336948::1::::<><><>0<>0<>78aeb9def626999ed7022ca6232073e6<>res://.godot/imported/Retro Jump 01.wav-1e7054e8ba924bf508fda5167ace69a3.sample::
+Retro Jump Classic 08.wav::AudioStreamWAV/AudioStreamWAV::432893434189359144::1753336494::1753336948::1::::<><><>0<>0<>7dea4ca480bebdf54db3c3f648c15ed4<>res://.godot/imported/Retro Jump Classic 08.wav-cea99fad0cb3806d3ee3c3dbef8b603b.sample::
+Retro Jump Simple A 01.wav::AudioStreamWAV/AudioStreamWAV::7896599548007686010::1753336494::1753336948::1::::<><><>0<>0<>82f6551761134e346898b8c5d32f69e3<>res://.godot/imported/Retro Jump Simple A 01.wav-eed52e31e50d05b40e778f2527073b7f.sample::
+Retro Jump Simple B 05.wav::AudioStreamWAV/AudioStreamWAV::5782499509727682990::1753336494::1753336948::1::::<><><>0<>0<>e5952f4b442a2452b22e0302b9aaed84<>res://.godot/imported/Retro Jump Simple B 05.wav-21fb36125c4132e9971c6d267142e5af.sample::
+Retro Jump Simple C2 02.wav::AudioStreamWAV/AudioStreamWAV::3536529706354416792::1753336494::1753336948::1::::<><><>0<>0<>d4c7500d5fb66543360e1c8f9a9d48fa<>res://.godot/imported/Retro Jump Simple C2 02.wav-4f5e70771cb944acb48789ed89693191.sample::
+Retro Jump StereoUP Simple 01.wav::AudioStreamWAV/AudioStreamWAV::3593968853195968724::1753336494::1753336948::1::::<><><>0<>0<>c4fa7488ecde33c1ef885ba476950726<>res://.godot/imported/Retro Jump StereoUP Simple 01.wav-9c8a9489a90949c5389c1df8537d4a4a.sample::
+Retro Jump StereoUP Simple 05.wav::AudioStreamWAV/AudioStreamWAV::2111293104422920063::1753336494::1753336948::1::::<><><>0<>0<>95ee4358dbffc69e0967f1c2dde120b8<>res://.godot/imported/Retro Jump StereoUP Simple 05.wav-259f1248a69ec0ac44038c984ed61633.sample::
+::res://Assets/Sound/Music/::1753800928
+::res://Assets/Sound/Music/Events/::1753800896
+Retro Music - WolfSynth - Tempo Normal - 02.wav::AudioStreamWAV/AudioStreamWAV::5588637633276982500::1753336495::1753336948::1::::<><><>0<>0<>6cb1c929bf6ed708794616b4b45d75af<>res://.godot/imported/Retro Music - WolfSynth - Tempo Normal - 02.wav-c6cc84cf84650cb118bf382534425f63.sample::
+::res://Assets/Sound/Music/Negative/::1753800897
+Retro Negative Melody 01 - aCustom1.wav::AudioStreamWAV/AudioStreamWAV::8076625070550410262::1753336495::1753336948::1::::<><><>0<>0<>06be082e292d330da7753121853562d6<>res://.godot/imported/Retro Negative Melody 01 - aCustom1.wav-af437f7c98c14c73500e208fe32ebdd4.sample::
+Retro Negative Melody 02 - space voice pad.wav::AudioStreamWAV/AudioStreamWAV::2624609152332946355::1753336495::1753336948::1::::<><><>0<>0<>56f994e130af38ddbe17d399b348b606<>res://.godot/imported/Retro Negative Melody 02 - space voice pad.wav-9da6c3e974deadd78e34efaff60a8e95.sample::
+::res://Assets/Sound/Music/Nes Style/::1753800897
+Retro Music Loop - PV8 - NES Style 01.wav::AudioStreamWAV/AudioStreamWAV::5664253974013773790::1753336495::1753336948::1::::<><><>0<>0<>3b9c8586e04bff4543a06b7cfdcd7c2b<>res://.godot/imported/Retro Music Loop - PV8 - NES Style 01.wav-c030f8aa4d24dd6fcadb541589f4f0b1.sample::
+::res://Assets/Sound/Music/Success/::1753800897
+Retro Success Melody 01 - sawtooth lead 1.wav::AudioStreamWAV/AudioStreamWAV::4752075029303888570::1753336495::1753336948::1::::<><><>0<>0<>684be785a87ed8b19fe82cdedaa82ef9<>res://.godot/imported/Retro Success Melody 01 - sawtooth lead 1.wav-d4f62bfda033837f59d0765b1f0b8aae.sample::
+Retro Success Melody 02 - choir soprano.wav::AudioStreamWAV/AudioStreamWAV::5523850007154861623::1753336495::1753336948::1::::<><><>0<>0<>b872d0e4bbeca5ae2db3d5619f0d9264<>res://.godot/imported/Retro Success Melody 02 - choir soprano.wav-1c154431843e6b848c675a7bd4fc7f13.sample::
+Retro Success Melody 04 - electric piano 2.wav::AudioStreamWAV/AudioStreamWAV::6403672520832418074::1753336495::1753336948::1::::<><><>0<>0<>1fccbae39b5b370323ad13ad7b3de1c3<>res://.godot/imported/Retro Success Melody 04 - electric piano 2.wav-33b74d9a16ab82f85c3210e7a6e161a5.sample::
+::res://Assets/Sound/PickUp/::1753800897
+Retro PickUp 10.wav::AudioStreamWAV/AudioStreamWAV::6470575879627509936::1753336495::1753336948::1::::<><><>0<>0<>544c00f5946e317813d746c78ce9a679<>res://.godot/imported/Retro PickUp 10.wav-9ad71a28063a00ba58f6aa44e005d487.sample::
+Retro PickUp 18.wav::AudioStreamWAV/AudioStreamWAV::9002751083009040263::1753336495::1753336948::1::::<><><>0<>0<>abb08e22f7ba6c9359c6747f6c67e3fa<>res://.godot/imported/Retro PickUp 18.wav-64bdc753968af71affa83e37d3e5ccf4.sample::
+Retro PickUp Coin 04.wav::AudioStreamWAV/AudioStreamWAV::1343518163447175126::1753336495::1753336948::1::::<><><>0<>0<>22d0c1706bd9e284409c64dd8fb4da92<>res://.godot/imported/Retro PickUp Coin 04.wav-48da8a236348045613653a4738993eed.sample::
+Retro PickUp Coin 07.wav::AudioStreamWAV/AudioStreamWAV::986519065719711899::1753336495::1753336948::1::::<><><>0<>0<>60b4779f642059be41c3ef9a26af9a40<>res://.godot/imported/Retro PickUp Coin 07.wav-b7f53111856ee95df85dade5e06d66ce.sample::
+Retro PickUp Coin StereoUP 04.wav::AudioStreamWAV/AudioStreamWAV::6858572406926038202::1753336495::1753336949::1::::<><><>0<>0<>442d9ec01ef459700a18004cb73334ad<>res://.godot/imported/Retro PickUp Coin StereoUP 04.wav-f72d6199551620b54535867f48610d16.sample::
+::res://Assets/Sound/PowerUp/::1753800897
+Retro PowerUP 09.wav::AudioStreamWAV/AudioStreamWAV::6678888206093742942::1753336495::1753336948::1::::<><><>0<>0<>3cb0557ded384cd4b4196b80f67455f2<>res://.godot/imported/Retro PowerUP 09.wav-225d1c2d255e7e1b288049603b12fa24.sample::
+Retro PowerUP 23.wav::AudioStreamWAV/AudioStreamWAV::6366541515919970019::1753336495::1753336949::1::::<><><>0<>0<>e87479ef8e632c5d356c349e4221812a<>res://.godot/imported/Retro PowerUP 23.wav-d72bb0986f5a3657b68f56cf396007dc.sample::
+Retro PowerUP StereoUP 05.wav::AudioStreamWAV/AudioStreamWAV::7778945731790538192::1753336495::1753336949::1::::<><><>0<>0<>f539a243377d16bb9098583e664005ff<>res://.godot/imported/Retro PowerUP StereoUP 05.wav-5cc9dc704cd2b3736d9993d2a5303bf5.sample::
+::res://Assets/Sprite/::1753800897
+::res://Assets/Sprite/1 bit kenney/::1753800897
+monochrome_tilemap_packed.png::CompressedTexture2D/CompressedTexture2D::3578326897883478501::1635878781::1753336948::1::::<><><>0<>0<>6aa4b5d4b6acf35fe1839cb769d5616e<>res://.godot/imported/monochrome_tilemap_packed.png-a5abfc5436dbc59b64db715da25ad0b5.ctex::
+monochrome_tilemap_transparent_packed.png::CompressedTexture2D/CompressedTexture2D::3573666808012185945::1635878781::1753336948::1::::<><><>0<>0<>bc8d04dc2b1fbe9fd3b14a095ec65ff6<>res://.godot/imported/monochrome_tilemap_transparent_packed.png-bff6bd053d94926255908a14c6962efd.ctex::
+::res://Assets/Sprite/1-Bit_Caves_Omniclause/::1753800897
+1-bit_tileset_solid_background.png::CompressedTexture2D/CompressedTexture2D::864511740015590720::1751552580::1753336948::1::::<><><>0<>0<>5a6da9f36b45db5c51f482f23b468bd2<>res://.godot/imported/1-bit_tileset_solid_background.png-242dceacec80dfecc4788edffceecd95.ctex::
+1-bit_tileset_transparent_background.png::CompressedTexture2D/CompressedTexture2D::5981369811130148159::1751454555::1753336948::1::::<><><>0<>0<>0d3eb85d47315a656d34ed6f4891e811<>res://.godot/imported/1-bit_tileset_transparent_background.png-b4354cedce6774238794c74737974529.ctex::
+Example.png::CompressedTexture2D/CompressedTexture2D::1972407465589207368::1751454555::1753336948::1::::<><><>0<>0<>73014259c901b225289c9a2a9599356c<>res://.godot/imported/Example.png-818e86f64b941e2499dc97bf942e5e61.ctex::
+::res://Assets/Sprite/1bit adventure/::1753800897
+::res://Assets/Sprite/1bit adventure/Enemies/::1753800897
+::res://Assets/Sprite/1bit adventure/Enemies/Bat_enemy/::1753800897
+bat_enemy.png::CompressedTexture2D/CompressedTexture2D::2396829105569696030::1751372390::1753336948::1::::<><><>0<>0<>9d42176823fc4681eb12e1375bf12331<>res://.godot/imported/bat_enemy.png-79f1b8dbb70f8414c467f4400f9ea8c9.ctex::
+::res://Assets/Sprite/1bit adventure/Enemies/Eye_enemy/::1753800897
+eye_enemy.png::CompressedTexture2D/CompressedTexture2D::4326745307980857936::1751372390::1753336948::1::::<><><>0<>0<>301ae5bc371658d8f2461dcd3bab4663<>res://.godot/imported/eye_enemy.png-044ad2b59e486f0455ca55cbfdd31332.ctex::
+::res://Assets/Sprite/1bit adventure/Enemies/Skeleton_enemy/::1753800897
+skeleton_enemy.png::CompressedTexture2D/CompressedTexture2D::6257708012251461243::1751372390::1753336948::1::::<><><>0<>0<>400205b4004c0456cf2f252852a98dd1<>res://.godot/imported/skeleton_enemy.png-19c03756d321a6e9904d6517f9bda801.ctex::
+::res://Assets/Sprite/1bit adventure/Enemies/Slime_enemy/::1753800897
+slime.png::CompressedTexture2D/CompressedTexture2D::5620738133642058684::1752070073::1753336948::1::::<><><>0<>0<>ccc7d0c436c8458e4e2a356ac4019d3c<>res://.godot/imported/slime.png-aa4f2406a98745f887ff7bd5c23ca17f.ctex::
+::res://Assets/Sprite/1bit adventure/Items/::1753800897
+coin1.png::CompressedTexture2D/CompressedTexture2D::5566470637503596293::1751372390::1753336948::1::::<><><>0<>0<>eb9ecf0dacd13fb33cd8a80b283ee7e0<>res://.godot/imported/coin1.png-afa3027c46be246a835f3d4b81200138.ctex::
+coin2.png::CompressedTexture2D/CompressedTexture2D::7739116235998436604::1751372390::1753336948::1::::<><><>0<>0<>94bf3a81cbd27dd318cd2c050f385b42<>res://.godot/imported/coin2.png-e8741c9609bee08bcde72508b582bbda.ctex::
+potion1.png::CompressedTexture2D/CompressedTexture2D::2208936277499337855::1751372390::1753336948::1::::<><><>0<>0<>516bc3af3284eca02628939ca8659dbb<>res://.godot/imported/potion1.png-1c12f86ff0d602318192a9b669d568d5.ctex::
+potion2.png::CompressedTexture2D/CompressedTexture2D::3196248253771030556::1751372390::1753336948::1::::<><><>0<>0<>4a4cf1a42f407472bf6786713047da4e<>res://.godot/imported/potion2.png-3aff51217fcf33d472168f7a09b4dd5b.ctex::
+::res://Assets/Sprite/1bit adventure/Player/::1753800897
+player.png::CompressedTexture2D/CompressedTexture2D::6292492981607874456::1753700293::1753799714::1::::<><><>0<>0<>368ecf3a5e7d0223f824d5fc940a3ae7<>res://.godot/imported/player.png-86a2a3aa3b65dbaef2c125e6a249e4d7.ctex::
+::res://Assets/Sprite/1bit adventure/Tiles/::1753800897
+platform_tiles.png::CompressedTexture2D/CompressedTexture2D::7479256769797886548::1751372390::1753336948::1::::<><><>0<>0<>26cb8df333ed0d908c6a8dc002a185b5<>res://.godot/imported/platform_tiles.png-ea31b85afb7a460132cd53a540bfd6ed.ctex::
+tilemap.png::CompressedTexture2D/CompressedTexture2D::6455129578490726280::1751372390::1753336948::1::::<><><>0<>0<>73ed3588fe221111a5c841ddd0e9332c<>res://.godot/imported/tilemap.png-697796c78a61a63a83e33f1868b9a7a0.ctex::
+tilemap_guide.png::CompressedTexture2D/CompressedTexture2D::5366411758447937378::1751372390::1753336948::1::::<><><>0<>0<>f0f81c34ee4c5b7b739c3c0e1e676f3f<>res://.godot/imported/tilemap_guide.png-4a0846c64fdb661dcd64c58d023c1fda.ctex::
+water_tile.png::CompressedTexture2D/CompressedTexture2D::3861366875935259168::1751372390::1753336948::1::::<><><>0<>0<>8a4212baf8acb7cf81d8da5cb53894ab<>res://.godot/imported/water_tile.png-ddd01227f7b28f59e0eaf6f4b8e0ccad.ctex::
+::res://Assets/Sprite/Font/::1753800897
+PIXBOB TALL LITE.otf::FontFile/FontFile::9192516719301267573::1737871419::1753336947::1::::<><><>0<>0<>1cdd9b9a02793f9a8e5efae3cf150725<>res://.godot/imported/PIXBOB TALL LITE.otf-d9c13af74e4854ee365ef039c94dbd67.fontdata::
+::res://Assets/Sprite/Remaking_hollow_knight_assets/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Enemies/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Enemies/Sprites/::1753800897
+enemy_rpg.png::CompressedTexture2D/CompressedTexture2D::1378459956484058479::1753321857::1753336947::1::::<><><>0<>0<>2d94071b2111c9e3d7bdb1fe49ebf0d5<>res://.godot/imported/enemy_rpg.png-7558f4664b7600174a570faaa6b5fe1b.ctex::
+Player2.png::CompressedTexture2D/CompressedTexture2D::2183370586098739326::1753321857::1753336947::1::::<><><>0<>0<>cbc9f170fbc0fa2331b37d6b693d606d<>res://.godot/imported/Player2.png-3b55948fb06d209fceef601774fb155a.ctex::
+Player_metroid.png::CompressedTexture2D/CompressedTexture2D::4032673999579056459::1753321857::1753336947::1::::<><><>0<>0<>244977247d10c32d87833af6353cae4d<>res://.godot/imported/Player_metroid.png-88f82fb8f70a1f2d375ecf7c3cba697e.ctex::
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/FX/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/FX/Sprites/::1753800897
+dead_fx.png::CompressedTexture2D/CompressedTexture2D::287398809928679174::1753321857::1753336947::1::::<><><>0<>0<>1a64220adc0675c4571af92cf96e5866<>res://.godot/imported/dead_fx.png-84ae43bafe8b5e320af69ba4ffc2623c.ctex::
+Explosions.png::CompressedTexture2D/CompressedTexture2D::936287928822062540::1753321857::1753336947::1::::<><><>0<>0<>da9e377376ffc36c1421705f047e1797<>res://.godot/imported/Explosions.png-d1efcb2f0218bef4dde4409096b7665c.ctex::
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Interactables/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Interactables/Sprites/::1753800897
+Bench.png::CompressedTexture2D/CompressedTexture2D::2354435812580120528::1753321857::1753336947::1::::<><><>0<>0<>aba492a302bb79977962f7e96b706ab1<>res://.godot/imported/Bench.png-7789f39922a9cdf6f602fc500eec15a5.ctex::
+BossDoor.png::CompressedTexture2D/CompressedTexture2D::7218118588972843651::1753321857::1753336947::1::::<><><>0<>0<>e49edbf6342cc48fd9c498ce38705462<>res://.godot/imported/BossDoor.png-e4652b31373884292aa5387925447649.ctex::
+coin.png::CompressedTexture2D/CompressedTexture2D::4738051841427265895::1753321857::1753336947::1::::<><><>0<>0<>0cd01cdf9604c7d1337b81048e252478<>res://.godot/imported/coin.png-ca6307a7aad0f27ec07f6cf076d27e80.ctex::
+Crate-animated.png::CompressedTexture2D/CompressedTexture2D::5276510349333888520::1753321857::1753336947::1::::<><><>0<>0<>b41ed909aca915a95f566dbda217ec42<>res://.godot/imported/Crate-animated.png-b1aebe47010200602d4fed2ec3b2eb7d.ctex::
+EnergyBorne.png::CompressedTexture2D/CompressedTexture2D::1183606507536596690::1753321857::1753336947::1::::<><><>0<>0<>349764ecbcaff62c244aaeb0f2c30486<>res://.godot/imported/EnergyBorne.png-48592d50bee64761d7af2b104d8cdbca.ctex::
+key.png::CompressedTexture2D/CompressedTexture2D::8846978118473807602::1753321857::1753336947::1::::<><><>0<>0<>e12991f64f7e856a7e8dea9a67cdeb91<>res://.godot/imported/key.png-d21e66f627276b5bb31c1a3649efd8a6.ctex::
+Lever.png::CompressedTexture2D/CompressedTexture2D::4138310332770159595::1753321857::1753336947::1::::<><><>0<>0<>f92c6a58879cbf58db5d3a769b944095<>res://.godot/imported/Lever.png-4dd522692bf7966dd3c1de557858feca.ctex::
+spikes_spritesheet.png::CompressedTexture2D/CompressedTexture2D::6518218932359555476::1753321857::1753336947::1::::<><><>0<>0<>f20e3cd686bd3b7d4cb0459597d41796<>res://.godot/imported/spikes_spritesheet.png-91decb583a612c8ab11d4ded81d70b88.ctex::
+temporaryPlatform.png::CompressedTexture2D/CompressedTexture2D::1170376887659678082::1753321857::1753336947::1::::<><><>0<>0<>83dbb6f9e799c964ec4702ba87363f22<>res://.godot/imported/temporaryPlatform.png-205c9ec990dfff292deada678de3ae88.ctex::
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Player/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Player/Sprites/::1753800897
+Player_hollow_knight.png::CompressedTexture2D/CompressedTexture2D::5886246953044490147::1753321857::1753336947::1::::<><><>0<>0<>5655bcc7c50b9526f725aa5bce84b677<>res://.godot/imported/Player_hollow_knight.png-c193a8b70cb7120b498e057b0964850d.ctex::
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Tileset/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Tileset/Sprites/::1753800897
+ground-tileset.png::CompressedTexture2D/CompressedTexture2D::4893554106053862766::1753321857::1753336947::1::::<><><>0<>0<>9c7d623d17f7fd723bc8e474e95b2b85<>res://.godot/imported/ground-tileset.png-dc7730eaf113bc1b057d9993cb60c1ae.ctex::
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/UI/::1753800897
+::res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/UI/Sprites/::1753800897
+HeartSpriteSheet.png::CompressedTexture2D/CompressedTexture2D::6696639383049502280::1753321857::1753336947::1::::<><><>0<>0<>d4c19125db30add64f04b0ad26a7232e<>res://.godot/imported/HeartSpriteSheet.png-93a5d8a2ae15a1ce715047fec06dd3ed.ctex::
+tileset_map.png::CompressedTexture2D/CompressedTexture2D::5457537674166922942::1753321857::1753336947::1::::<><><>0<>0<>0e19a1d4a5d5692fad062fc5406ae546<>res://.godot/imported/tileset_map.png-5c9dff0c91b47e7f9691128447b5e7bd.ctex::
+::res://Assets/Sprite/SeanMakesGames/::1753800897
+::res://Assets/Sprite/SeanMakesGames/Enemies/::1753800897
+enemy_rpg.png::CompressedTexture2D/CompressedTexture2D::7985488876941078456::1752321740::1753336947::1::::<><><>0<>0<>0ed278707829ad726ae63fe2c1bbbc52<>res://.godot/imported/enemy_rpg.png-22740bad4cb6e5f89bbc755370c99819.ctex::
+::res://Assets/Sprite/SeanMakesGames/Environment/::1753800897
+2d_metroidvania_serie_mockup_1_tileset.png::CompressedTexture2D/CompressedTexture2D::795329611213740893::1752321740::1753336947::1::::<><><>0<>0<>092f28f8398c8c556700af522a71def8<>res://.godot/imported/2d_metroidvania_serie_mockup_1_tileset.png-b8f2cfff43ddf345cc3123fe75ea59e1.ctex::
+background_sprite_1.png::CompressedTexture2D/CompressedTexture2D::1469597547103333120::1752321740::1753336947::1::::<><><>0<>0<>254beb37b70a06406cfd7841c2079b88<>res://.godot/imported/background_sprite_1.png-7c1b30b0f26f3273bfaab371d7caf96d.ctex::
+background_sprite_2.png::CompressedTexture2D/CompressedTexture2D::7434975951277504596::1752321740::1753336947::1::::<><><>0<>0<>7f6e011d00a514d18878057122cf87aa<>res://.godot/imported/background_sprite_2.png-6106c518e5fc83a08b4b485216be207d.ctex::
+::res://Assets/Sprite/SeanMakesGames/FX/::1753800897
+dead_fx.png::CompressedTexture2D/CompressedTexture2D::7452557605400364377::1752321740::1753336947::1::::<><><>0<>0<>53a344816c2ba87907970720cad0f171<>res://.godot/imported/dead_fx.png-6e2a37216cb4abd13c99e34652705d29.ctex::
+::res://Assets/Sprite/SeanMakesGames/Interactables/::1753800897
+chest-sheet.png::CompressedTexture2D/CompressedTexture2D::162034943802654659::1752321740::1753336947::1::::<><><>0<>0<>085fe30a424cd28fdaaae97634432ed5<>res://.godot/imported/chest-sheet.png-a78f74c250fdcd51de2d15b8a6ad9fba.ctex::
+coin.png::CompressedTexture2D/CompressedTexture2D::7256140627907405560::1752321740::1753336947::1::::<><><>0<>0<>4ad234afa3966d4a02397526f7ca492a<>res://.godot/imported/coin.png-92910f717b7ad514f60a1c51ed91d44c.ctex::
+Crate-animated.png::CompressedTexture2D/CompressedTexture2D::3841214257859106325::1752321740::1753336947::1::::<><><>0<>0<>4e03ad70c03badb769614d3b041b3185<>res://.godot/imported/Crate-animated.png-58ec036eca3e2b982ee01539f20fdf37.ctex::
+JumpPowerUp.png::CompressedTexture2D/CompressedTexture2D::4612605295031072953::1752321740::1753336947::1::::<><><>0<>0<>1ab68de438e4df08909c85da7af2b19d<>res://.godot/imported/JumpPowerUp.png-904b57c44a566e077b56283c7032215c.ctex::
+key.png::CompressedTexture2D/CompressedTexture2D::2483235218118295791::1752321740::1753336947::1::::<><><>0<>0<>6b51a2a2b12e6461ba84509c64e18e47<>res://.godot/imported/key.png-7a153783559c2464dc0ef3770a228e83.ctex::
+Lamp.png::CompressedTexture2D/CompressedTexture2D::5402954231543104118::1752321740::1753336947::1::::<><><>0<>0<>cb2cbd8c9cbaf657bc23a4b02d15367a<>res://.godot/imported/Lamp.png-62662d8f5b64a3027df64246818ab71b.ctex::
+LanternW3.png::CompressedTexture2D/CompressedTexture2D::691769655641400549::1752321740::1753336947::1::::<><><>0<>0<>f1e4cb1035b3964ce7a6380c5b342aa9<>res://.godot/imported/LanternW3.png-e0d71a07026ac1646960df04ac1490cb.ctex::
+spikes_spritesheet.png::CompressedTexture2D/CompressedTexture2D::2003440363359767395::1752321740::1753336947::1::::<><><>0<>0<>8b345a5d6f45059f7fd739687b2bdb63<>res://.godot/imported/spikes_spritesheet.png-4d7f1d52a4d0f064613ee09022ec8ca3.ctex::
+temporaryPlatform.png::CompressedTexture2D/CompressedTexture2D::178535184850965869::1752321740::1753336947::1::::<><><>0<>0<>9ead12cdfe3961291b5f66583250d3df<>res://.godot/imported/temporaryPlatform.png-5bf502ca3f567207d688013ebd32925d.ctex::
+::res://Assets/Sprite/SeanMakesGames/Player/::1753800897
+Player_metroid.png::CompressedTexture2D/CompressedTexture2D::8184400565589713958::1752321740::1753336947::1::::<><><>0<>0<>dbdcd91c41c7d75052adeed506f64c07<>res://.godot/imported/Player_metroid.png-e6d971eb81c32eaa2ce3522da2bcd643.ctex::
+::res://Assets/Sprite/SeanMakesGames/UI/::1753800897
+HeartSpriteSheet.png::CompressedTexture2D/CompressedTexture2D::5781040537352440527::1752321740::1753336947::1::::<><><>0<>0<>5a0e8df878449221ffdce1b671835078<>res://.godot/imported/HeartSpriteSheet.png-f0e9534a3d70f0675515bc9863c97630.ctex::
+::res://Assets/Sprite/Warrior+VFX/::1753800897
+::res://Assets/Sprite/Warrior+VFX/Vfx/::1753800897
+deathfx-Sheet.png::CompressedTexture2D/CompressedTexture2D::6420347422745481697::1631647714::1753336947::1::::<><><>0<>0<>94d0794501ecdb726437a18a1f6d240a<>res://.godot/imported/deathfx-Sheet.png-b42d8e545d74d48b88d0ca91e5ea2692.ctex::
+impactfx-Sheet.png::CompressedTexture2D/CompressedTexture2D::5516561813238929276::1630340154::1753336947::1::::<><><>0<>0<>bb39fd2e73c23119c110d086c1537aab<>res://.godot/imported/impactfx-Sheet.png-b5f770b13ab6e64baa043a92a0cf3437.ctex::
+jumpfx-Sheet.png::CompressedTexture2D/CompressedTexture2D::3534215929278811915::1630340133::1753336947::1::::<><><>0<>0<>5fd14324bb2c15c0e220f3a18069d34a<>res://.godot/imported/jumpfx-Sheet.png-0ae459d88e4bd3f89d6ec3fddd72413d.ctex::
+::res://Assets/Sprite/Warrior+VFX/Warrior/::1753800897
+warriorattack-Sheet.png::CompressedTexture2D/CompressedTexture2D::5013215517927749447::1630340029::1753336947::1::::<><><>0<>0<>162129f81f601fafeffa84c14e819c2a<>res://.godot/imported/warriorattack-Sheet.png-66bb20a69c7b02128789091a296eb1be.ctex::
+warriorblock-Sheet.png::CompressedTexture2D/CompressedTexture2D::159676906187312941::1630340041::1753336947::1::::<><><>0<>0<>452c6d9633b3600acb8de14af1348401<>res://.godot/imported/warriorblock-Sheet.png-bdc5e1a36a1dd61acdb13d25aeb6f83e.ctex::
+warriordamage-Sheet.png::CompressedTexture2D/CompressedTexture2D::4021573630333962415::1631647690::1753336947::1::::<><><>0<>0<>f008f6e66eb3417c26e9f6c23e87f15b<>res://.godot/imported/warriordamage-Sheet.png-ea6faa13e2550aac6178521819614547.ctex::
+warriorfall-Sheet.png::CompressedTexture2D/CompressedTexture2D::5842926265884759557::1631647705::1753336947::1::::<><><>0<>0<>b3055f6725823db66af67f346e9ff5f0<>res://.godot/imported/warriorfall-Sheet.png-f09153500b1e9a29527aa74fb8b99e20.ctex::
+warrioridle-Sheet.png::CompressedTexture2D/CompressedTexture2D::3343902159004757741::1630339964::1753336947::1::::<><><>0<>0<>e75997771554dfb7020c4db263a22f64<>res://.godot/imported/warrioridle-Sheet.png-9685f24d7d067b55cdce823cc194cce0.ctex::
+warriorjump-Sheet.png::CompressedTexture2D/CompressedTexture2D::6876650716195363843::1630340006::1753336947::1::::<><><>0<>0<>04ca688651f143f86d4c12f4d6be23ed<>res://.godot/imported/warriorjump-Sheet.png-1632e4f435948d05b01f563db10bf61d.ctex::
+warriorrun-Sheet.png::CompressedTexture2D/CompressedTexture2D::8438371690935066532::1630339993::1753336947::1::::<><><>0<>0<>197e6ef65cb2f14554bb18dbc9001c8d<>res://.godot/imported/warriorrun-Sheet.png-150f2752625fbdaef2bfe278ac664b42.ctex::
+warriorslashfx-Sheet.png::CompressedTexture2D/CompressedTexture2D::3656148295216967326::1630340065::1753336947::1::::<><><>0<>0<>c9d160212dfc2b34bfa11d656964591c<>res://.godot/imported/warriorslashfx-Sheet.png-cd1db53bdfaf5f5cc6428005d4b5c3be.ctex::
+warriorwalk-Sheet.png::CompressedTexture2D/CompressedTexture2D::1552266606680400015::1630339977::1753336947::1::::<><><>0<>0<>c201e343cd055f42a7f98102e3360fb8<>res://.godot/imported/warriorwalk-Sheet.png-2aa711b9cc2b02007fba33330ac6d714.ctex::
+::res://Codes/::1753800897
+player_1.gd::GDScript/GDScript::5591239846901962736::1753656518::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_3.gd::GDScript::5139776321077813659::1753800653::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/::1753800898
+level_1.tscn::PackedScene::3209079382730176364::1753800855::0::1::::<><><>0<>0<><>::uid://bq8mryrtchfvp::::res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png<>uid://cw15rtl85lxg8::::res://Scenes/player_1.tscn
+level_2.tscn::PackedScene::7234442022892525954::1753800867::0::1::::<><><>0<>0<><>::uid://bq8mryrtchfvp::::res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png<>uid://c7cqxasj1xdtp::::res://Scenes/player_3.tscn
+PlayerAnim.tres::SpriteFrames::2127865564719572810::1753799714::0::1::::<><><>0<>0<><>::uid://cvweo7yhfr401::::res://Assets/Sprite/1bit adventure/Player/player.png
+PlayerCol.tres::RectangleShape2D/RectangleShape2D::9178491047795653066::1753269348::0::1::::<><><>0<>0<><>::
+player_1.tscn::PackedScene::6372522633784265441::1753800856::0::1::::<><><>0<>0<><>::uid://clwo5yk1b3fue::::res://Codes/player_1.gd<>uid://5k0vuax1b7ni::::res://Scenes/PlayerAnim.tres<>uid://d31en28sumuvq::::res://Scenes/PlayerCol.tres<>uid://dw2kshvvhsels::::res://Assets/Sound/jump.wav<>uid://bqneelqawfovo::::res://Assets/Sound/Bounce Jump/Retro Jump Simple C2 02.wav
+player_2.tscn::PackedScene/PackedScene::7472961106331862068::1753799714::0::1::::<><><>0<>0<><>::uid://cvweo7yhfr401::::res://Assets/Sprite/1bit adventure/Player/player.png<>uid://d31en28sumuvq::::res://Scenes/PlayerCol.tres
+player_3.tscn::PackedScene::7024025692706485145::1753800856::0::1::::<><><>0<>0<><>::uid://5k0vuax1b7ni::::res://Scenes/PlayerAnim.tres<>uid://cfh0mobad77ud::::res://Codes/player_3.gd<>uid://d31en28sumuvq::::res://Scenes/PlayerCol.tres

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw15rtl85lxg8"]
+
+[ext_resource type="Script" uid="uid://clwo5yk1b3fue" path="res://Codes/player_1.gd" id="1_tmdyv"]
+[ext_resource type="SpriteFrames" uid="uid://5k0vuax1b7ni" path="res://Scenes/PlayerAnim.tres" id="2_tmdyv"]
+[ext_resource type="Shape2D" uid="uid://d31en28sumuvq" path="res://Scenes/PlayerCol.tres" id="3_p0e4v"]
+[ext_resource type="AudioStream" uid="uid://dw2kshvvhsels" path="res://Assets/Sound/jump.wav" id="4_c4k0l"]
+[ext_resource type="AudioStream" uid="uid://bqneelqawfovo" path="res://Assets/Sound/Bounce Jump/Retro Jump Simple C2 02.wav" id="5_aatkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e4v"]
+size = Vector2(8, 16)
+
+[node name="Player1" type="CharacterBody2D"]
+script = ExtResource("1_tmdyv")
+
+[node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2)
+sprite_frames = ExtResource("2_tmdyv")
+animation = &"dash"
+autoplay = "idle"
+
+[node name="PlayerCol" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = ExtResource("3_p0e4v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6, 6)
+limit_bottom = 128
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="SwordArea" type="Area2D" parent="."]
+
+[node name="SwordCol" type="CollisionShape2D" parent="SwordArea"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_p0e4v")
+debug_color = Color(0.718812, 0.285588, 1, 0.42)
+
+[node name="AttackCooldown" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="JumpSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_c4k0l")
+
+[node name="JumpSfx2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_aatkl")
+
+[node name="DashDuration" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="body_entered" from="SwordArea" to="." method="_on_sword_area_body_entered"]
+[connection signal="timeout" from="DashDuration" to="." method="_on_dash_duration_timeout"]
