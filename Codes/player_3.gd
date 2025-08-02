@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -300.0
 @onready var dash_cooldown = $DashCooldown
 @onready var sword_area = $SwordArea
 @onready var sword_col = $SwordArea/SwordCol
+@onready var jump_sfx = $JumpSFX
 
 
 # For dash
@@ -92,12 +93,12 @@ func jump():
 	
 	if jumps_left > 1 && velocity.y >= 0.0:
 		if Input.is_action_just_pressed("jump"):
-			#jump_sfx.play()
+			jump_sfx.play()
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1 
 	elif jumps_left == 1 && velocity.y >= 0.0:
 		if Input.is_action_just_pressed("jump"):
-			#jump_sfx_2.play()
+			jump_sfx.play()
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1 
 
@@ -147,6 +148,12 @@ func set_animation(direction):
 			player_anim.play("fall")
 
 
+func killPlayer():
+	await get_tree().create_timer(0.5).timeout
+	get_tree().reload_current_scene()
+	#get_tree().change_scene_to_file("res://path_to_scene.tscn")
+
+
 func _on_dash_duration_timeout():
 	is_dash = false
 
@@ -159,3 +166,7 @@ func _on_sword_area_body_entered(body):
 	if is_attack and body.is_in_group("enemies"):
 		if body.has_method("take_damage"):
 			body.take_damage(1)
+
+
+func _on_killzone_body_entered(body):
+	killPlayer()

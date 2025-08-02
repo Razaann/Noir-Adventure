@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://dbcog53xdv4kc"]
+[gd_scene load_steps=6 format=4 uid="uid://dbcog53xdv4kc"]
 
 [ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/player_3.tscn" id="2_smnlx"]
@@ -494,6 +494,8 @@ texture = ExtResource("1_v3rpw")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_smnlx")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_smnlx"]
+
 [node name="Level2" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -501,3 +503,12 @@ tile_map_data = PackedByteArray("AAD//wAAAAALAA0AAAAAAAAAAAALAA0AAAD+/wAAAAALAA0
 tile_set = SubResource("TileSet_12fag")
 
 [node name="Player3" parent="." instance=ExtResource("2_smnlx")]
+position = Vector2(0, -16)
+
+[node name="Killzone" type="Area2D" parent="."]
+position = Vector2(0, 448)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_smnlx")
+
+[connection signal="body_entered" from="Killzone" to="Player3" method="_on_killzone_body_entered"]
