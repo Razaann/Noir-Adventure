@@ -55,11 +55,11 @@ func _physics_process(delta):
 		if direction:
 			if direction > 0:
 				player_anim.flip_h = false
-				sword_area.position.x = 20 # To the right
+				sword_area.position.x = 16 # To the right
 				velocity.x = direction * SPEED
 			elif direction < 0:
 				player_anim.flip_h = true
-				sword_area.position.x = -20 # To the left
+				sword_area.position.x = -16 # To the left
 				velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -128,7 +128,7 @@ func set_animation(direction):
 	if is_dash:
 		player_anim.play("dash")
 		return
-	#elif is_dash and not is_on_floor():
+	#elif is_dash and is_on_floor():
 		#player_anim.play("dash")
 		#return
 	
@@ -148,12 +148,6 @@ func set_animation(direction):
 			player_anim.play("fall")
 
 
-func killPlayer():
-	await get_tree().create_timer(0.5).timeout
-	get_tree().reload_current_scene()
-	#get_tree().change_scene_to_file("res://path_to_scene.tscn")
-
-
 func _on_dash_duration_timeout():
 	is_dash = false
 
@@ -166,7 +160,3 @@ func _on_sword_area_body_entered(body):
 	if is_attack and body.is_in_group("enemies"):
 		if body.has_method("take_damage"):
 			body.take_damage(1)
-
-
-func _on_killzone_body_entered(body):
-	killPlayer()

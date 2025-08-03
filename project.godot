@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Noir's Adventure"
-run/main_scene="uid://blyrcljrr6ncm"
+run/main_scene="uid://dbcog53xdv4kc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
