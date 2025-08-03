@@ -506,7 +506,7 @@ point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_v36qu"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 336, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 155.707, 0, 0, 0, 0, 0, 516.293, 0)
 }
 point_count = 2
 
@@ -531,7 +531,7 @@ curve = SubResource("Curve2D_1q6tm")
 loop = false
 
 [node name="MovingPlatfrom2" parent="." instance=ExtResource("4_1q6tm")]
-position = Vector2(-96, -56)
+position = Vector2(136, -104)
 scale = Vector2(0.97619, 1)
 curve = SubResource("Curve2D_v36qu")
 loop = false
