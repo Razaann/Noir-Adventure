@@ -1,5 +1,7 @@
-AnimationPlayer
 CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
+AnimationPlayer
 Sprite2D
 RemoteTransform2D
 AnimatableBody2D
@@ -10,5 +12,3 @@ CanvasLayer
 Area2D
 Timer
 Camera2D
-AnimatedSprite2D
-CharacterBody2D
