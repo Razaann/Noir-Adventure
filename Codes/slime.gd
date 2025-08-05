@@ -23,3 +23,9 @@ func _physics_process(delta):
 		#velocity = move_toward(velocity, Vector2.ZERO, 100 * delta)
 	
 	move_and_slide()
+
+func take_damage(amount: int):
+	health -= amount
+	slime_anim.play("hit")  # Add a "hit" animation
+	if health <= 0:
+		queue_free()
