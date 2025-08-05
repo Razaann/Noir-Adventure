@@ -21,6 +21,7 @@ position = Vector2(0, -9)
 shape = ExtResource("2_wvkwn")
 
 [node name="SwordArea" type="Area2D" parent="." groups=["enemies"]]
+monitorable = false
 
 [node name="SwordCol" type="CollisionShape2D" parent="SwordArea"]
 position = Vector2(0, -8)

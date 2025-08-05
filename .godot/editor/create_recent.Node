@@ -1,3 +1,5 @@
+Node2D
+Area2D
 Node
 CollisionShape2D
 AnimatedSprite2D
@@ -10,6 +12,4 @@ PathFollow2D
 Path2D
 ColorRect
 CanvasLayer
-Area2D
 Timer
-Camera2D

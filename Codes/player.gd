@@ -73,7 +73,8 @@ func _physics_process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sword_col.disabled = true
+	pass
+	#sword_col.disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -106,16 +107,31 @@ func jump():
 # Handle attack
 func attack():
 	if is_on_floor():
+		# From https://www.youtube.com/watch?v=2n1kILlyx8M&t=18s&ab_channel=GameDevKnight
+		
+		var overlapping_objects = sword_area.get_overlapping_areas()
+		
+		for area in overlapping_objects:
+			var parent = area.get_parent()
+			print(parent.name)
+		
 		is_attack = true
 		player_anim.play("attack")
-		#attack_sfx.play()
-		sword_area.monitoring = true
-		sword_col.disabled = false
 		
-		await get_tree().create_timer(0.3).timeout
-		sword_area.monitoring = false
-		sword_col.disabled = true
-		is_attack = false
+		
+		
+		# Original Attack
+		
+		#is_attack = true
+		#player_anim.play("attack")
+		##attack_sfx.play()
+		#sword_area.monitoring = true
+		#sword_col.disabled = false
+		#
+		#await get_tree().create_timer(0.3).timeout
+		#sword_area.monitoring = false
+		#sword_col.disabled = true
+		#is_attack = false
 
 
 # Handle dash

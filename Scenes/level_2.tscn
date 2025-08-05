@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://dbcog53xdv4kc"]
+[gd_scene load_steps=11 format=4 uid="uid://dbcog53xdv4kc"]
 
 [ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/player.tscn" id="2_smnlx"]
 [ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/killzone.tscn" id="3_12fag"]
 [ext_resource type="PackedScene" uid="uid://byiohoj8165gc" path="res://Scenes/moving_platfrom.tscn" id="4_1q6tm"]
+[ext_resource type="PackedScene" uid="uid://bubp64sndxxrt" path="res://Scenes/slime.tscn" id="5_v36qu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smnlx"]
 texture = ExtResource("1_v3rpw")
@@ -539,3 +540,8 @@ scale = Vector2(0.97619, 1)
 curve = SubResource("Curve2D_v36qu")
 loop = false
 speed = 1.0
+
+[node name="Slime" parent="." instance=ExtResource("5_v36qu")]
+position = Vector2(-392, 64)
+health = 3
+speed = 20

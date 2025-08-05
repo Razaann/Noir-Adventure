@@ -6,16 +6,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aiwxb"]
 size = Vector2(14, 14)
 
-[node name="Slime" type="CharacterBody2D"]
+[node name="Slime" type="Node2D"]
 script = ExtResource("1_swwnm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="SlimeCol" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_aiwxb")
 
 [node name="SlimeAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = ExtResource("2_swwnm")
 animation = &"idle"
+autoplay = "idle"
 frame = 2
 frame_progress = 0.8357
-
-[node name="SlimeCol" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
-shape = SubResource("RectangleShape2D_aiwxb")

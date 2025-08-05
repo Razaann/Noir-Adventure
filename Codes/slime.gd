@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 
 @export var health := 3
 @export var speed := 20
@@ -15,17 +15,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if knockback_timer > 0:
-		velocity = knockback_velocity
-		knockback_timer -= delta
-	else:
-		pass
-		#velocity = move_toward(velocity, Vector2.ZERO, 100 * delta)
-	
-	move_and_slide()
-
-func take_damage(amount: int):
-	health -= amount
-	slime_anim.play("hit")  # Add a "hit" animation
-	if health <= 0:
-		queue_free()
+	pass
