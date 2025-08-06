@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 TransitionManager="*res://Scenes/transition.tscn"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+
 [global_group]
 
 enemies=""
@@ -61,4 +67,4 @@ attack={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.137255, 0.129412, 0.239216, 1)
