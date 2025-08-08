@@ -506,7 +506,7 @@ point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_v36qu"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 155.707, 0, 0, 0, 0, 0, 516.293, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 155.707, 0, 0, 0, 0, 0, -180.293, 0)
 }
 point_count = 2
 
@@ -525,13 +525,15 @@ position = Vector2(0, 256)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_1q6tm")
 
-[node name="MovingPlatfrom" parent="." instance=ExtResource("4_1q6tm")]
+[node name="Platfrom" type="Node" parent="."]
+
+[node name="MovingPlatfrom" parent="Platfrom" instance=ExtResource("4_1q6tm")]
 position = Vector2(88, -16)
 curve = SubResource("Curve2D_1q6tm")
 loop = false
 
-[node name="MovingPlatfrom2" parent="." instance=ExtResource("4_1q6tm")]
-position = Vector2(136, -104)
+[node name="MovingPlatfrom2" parent="Platfrom" instance=ExtResource("4_1q6tm")]
+position = Vector2(80, -56)
 scale = Vector2(0.97619, 1)
 curve = SubResource("Curve2D_v36qu")
 loop = false

@@ -1,14 +1,14 @@
 CollisionShape2D
+ColorRect
+Area2D
 AnimatedSprite2D
 CharacterBody2D
+Node
 AnimationPlayer
 Sprite2D
 RemoteTransform2D
 AnimatableBody2D
 PathFollow2D
 Path2D
-ColorRect
 CanvasLayer
-Area2D
 Timer
-Camera2D

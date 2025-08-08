@@ -5,7 +5,7 @@ extends CanvasLayer
 
 func _ready():
 	color_rect.visible = false
-	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
+	#animation_player.animation_finished.connect(_on_animation_player_animation_finished)
 
 func transition():
 	color_rect = true

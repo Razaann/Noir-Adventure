@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://byiohoj8165gc"]
 
-[ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_6xj5e"]
 [ext_resource type="Script" uid="uid://58uvttawhv2f" path="res://Codes/moving_platfrom.gd" id="1_10w73"]
+[ext_resource type="Texture2D" uid="uid://bq6d1gmjvd34h" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_transparent_packed.png" id="2_10w73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10w73"]
 size = Vector2(48, 16)
@@ -59,7 +59,7 @@ position = Vector2(6.67676, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
 position = Vector2(-6.67676, 0)
-texture = ExtResource("1_6xj5e")
+texture = ExtResource("2_10w73")
 region_enabled = true
 region_rect = Rect2(64, 64, 48, 16)
 
