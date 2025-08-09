@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -300.0
 @onready var sword_area = $SwordArea
 @onready var sword_col = $SwordArea/SwordCol
 @onready var jump_sfx = $JumpSFX
+@onready var attack_sfx = $AttackSFX
 
 
 # For dash
@@ -108,11 +109,13 @@ func attack():
 	if is_on_floor():
 		is_attack = true
 		player_anim.play("attack")
-		#attack_sfx.play()
+		attack_sfx.play()
+		
 		sword_area.monitoring = true
 		sword_col.disabled = false
 		
 		await get_tree().create_timer(0.3).timeout
+		
 		sword_area.monitoring = false
 		sword_col.disabled = true
 		is_attack = false

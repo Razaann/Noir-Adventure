@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7cqxasj1xdtp"]
+[gd_scene load_steps=7 format=3 uid="uid://c7cqxasj1xdtp"]
 
 [ext_resource type="SpriteFrames" uid="uid://5k0vuax1b7ni" path="res://Scenes/PlayerAnim.tres" id="1_f3ocw"]
 [ext_resource type="Script" uid="uid://cfh0mobad77ud" path="res://Codes/player.gd" id="1_ni73s"]
 [ext_resource type="Shape2D" uid="uid://d31en28sumuvq" path="res://Scenes/PlayerCol.tres" id="2_wvkwn"]
-[ext_resource type="AudioStream" uid="uid://dw2kshvvhsels" path="res://Assets/Sound/jump.wav" id="4_nyw82"]
+[ext_resource type="AudioStream" uid="uid://fqykq2oqlpr4" path="res://Assets/Sound/Jump.wav" id="4_vgqql"]
+[ext_resource type="AudioStream" uid="uid://d0x3437cxlpgv" path="res://Assets/Sound/attack.wav" id="5_fkybt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni73s"]
 size = Vector2(16, 16)
@@ -40,8 +41,12 @@ one_shot = true
 [node name="DashCooldown" type="Timer" parent="."]
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-24, 0)
-stream = ExtResource("4_nyw82")
+stream = ExtResource("4_vgqql")
+volume_db = 5.0
+
+[node name="AttackSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_fkybt")
+volume_db = 3.0
 
 [connection signal="body_entered" from="SwordArea" to="." method="_on_sword_area_body_entered"]
 [connection signal="timeout" from="DashDuration" to="." method="_on_dash_duration_timeout"]
