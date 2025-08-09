@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni73s"]
 size = Vector2(16, 16)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ni73s")
 
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
@@ -30,6 +30,7 @@ debug_color = Color(0.776056, 0.140232, 1, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+limit_bottom = 128
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0

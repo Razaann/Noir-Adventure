@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://dbcog53xdv4kc"]
+[gd_scene load_steps=12 format=4 uid="uid://dbcog53xdv4kc"]
 
 [ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/player.tscn" id="2_smnlx"]
 [ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/killzone.tscn" id="3_12fag"]
 [ext_resource type="PackedScene" uid="uid://byiohoj8165gc" path="res://Scenes/moving_platfrom.tscn" id="4_1q6tm"]
+[ext_resource type="PackedScene" uid="uid://t04akogpawxn" path="res://Scenes/slime_2.tscn" id="5_v36qu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smnlx"]
 texture = ExtResource("1_v3rpw")
@@ -510,6 +511,9 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v36qu"]
+size = Vector2(128, 16)
+
 [node name="Level2" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -537,3 +541,18 @@ position = Vector2(80, -56)
 scale = Vector2(0.97619, 1)
 curve = SubResource("Curve2D_v36qu")
 loop = false
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("5_v36qu")]
+position = Vector2(448, -64)
+
+[node name="Slime3" parent="Enemies" instance=ExtResource("5_v36qu")]
+position = Vector2(-448, 64)
+
+[node name="Killzone2" parent="." instance=ExtResource("3_12fag")]
+position = Vector2(112, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2"]
+position = Vector2(80, 48)
+shape = SubResource("RectangleShape2D_v36qu")

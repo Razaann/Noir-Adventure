@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
+@export var attack_damage = 1
+@export var attack_knockback_force = 300.0
+@export var player_knockback_force = 200.0
 
 # Nodes
 @onready var player_anim = $PlayerAnim
@@ -160,6 +163,11 @@ func _on_dash_cooldown_timeout():
 
 
 func _on_sword_area_body_entered(body):
-	if is_attack and body.is_in_group("enemies"):
-		if body.has_method("take_damage"):
-			body.take_damage(1)
+	#if is_attack and body.is_in_group("enemies"):
+		#if body.has_method("take_damage"):
+			#body.take_damage(1)
+			
+	if body.has_method("take_damage"):
+		# Calculate knockback direction
+		var knockback_direction = (body.global_position - global_position).normalized()
+		body.take_damage(attack_damage, knockback_direction * attack_knockback_force)

@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-@export var speed = 300.0
-@export var jump_velocity = -400.0
+@export var speed = 100.0
+@export var jump_velocity = -300.0
 @export var attack_range = 100.0
 @export var attack_damage = 1
-@export var attack_knockback_force = 500.0
-@export var player_knockback_force = 300.0
+@export var attack_knockback_force = 300.0
+@export var player_knockback_force = 200.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var attack_area = $AttackArea

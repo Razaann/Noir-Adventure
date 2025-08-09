@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var collision_shape = $CollisionShape2D
 @onready var detection_area = $DetectArea
+@onready var death_sfx = $DeathSFX
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var start_position: Vector2
@@ -93,6 +94,7 @@ func take_damage(damage: int, knockback_force: Vector2):
 func die():
 	print("Enemy died!")
 	# Add death animation or effects here
+	death_sfx.play()
 	animated_sprite.play("death")
 	collision_shape.disabled = true
 	

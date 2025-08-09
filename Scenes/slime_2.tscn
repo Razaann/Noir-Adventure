@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://t04akogpawxn"]
+[gd_scene load_steps=15 format=3 uid="uid://t04akogpawxn"]
 
 [ext_resource type="Texture2D" uid="uid://cmcy0awjq86ts" path="res://Assets/Sprite/1bit adventure/Enemies/Slime_enemy/slime.png" id="1_c7mp3"]
 [ext_resource type="Script" uid="uid://baw1ob0t35u4" path="res://Codes/slime_2.gd" id="1_n5x8b"]
+[ext_resource type="AudioStream" uid="uid://tx5qpxgamuvm" path="res://Assets/Sound/boom.wav" id="3_cr6pp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5eq2"]
 atlas = ExtResource("1_c7mp3")
@@ -52,7 +53,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -94,6 +95,8 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_w5eq2")
 animation = &"death"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
@@ -105,3 +108,6 @@ shape = SubResource("RectangleShape2D_n5x8b")
 position = Vector2(0, -8.5)
 shape = SubResource("RectangleShape2D_fyy3g")
 debug_color = Color(0.822337, 0.0135072, 0.958689, 0.42)
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cr6pp")
