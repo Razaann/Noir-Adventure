@@ -77,7 +77,7 @@ func update_animations():
 	else:
 		animated_sprite.play("idle")
 
-func take_damage(damage: int, knockback_force: Vector2):
+func take_damage(damage: int, knockback_force: Vector2, body):
 	health -= damage
 	
 	# Apply knockback

@@ -64,8 +64,10 @@ region_enabled = true
 region_rect = Rect2(64, 64, 48, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+z_index = 2
 position = Vector2(-6.67676, 0)
 shape = SubResource("RectangleShape2D_10w73")
+one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

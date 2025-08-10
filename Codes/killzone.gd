@@ -2,6 +2,7 @@ extends Area2D
 
 
 func _on_body_entered(body):
+	#if body.has_method("is_player"):
 	if body.is_in_group("Player"):
 		Engine.time_scale = 0.5
 		body.get_node("PlayerCol").queue_free()

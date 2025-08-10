@@ -95,16 +95,19 @@ func jump():
 	if is_on_floor():
 		jumps_left = 2
 	
-	if jumps_left > 1 && velocity.y >= 0.0:
+	if jumps_left > 0 && velocity.y >= 0.0:
 		if Input.is_action_just_pressed("jump"):
 			jump_sfx.play()
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1 
-	elif jumps_left == 1 && velocity.y >= 0.0:
-		if Input.is_action_just_pressed("jump"):
-			jump_sfx.play()
-			velocity.y = JUMP_VELOCITY
-			jumps_left -= 1 
+	
+	# If i want to use diffent SFX on the second jump
+	
+	#elif jumps_left == 1 && velocity.y >= 0.0:
+		#if Input.is_action_just_pressed("jump"):
+			#jump_sfx.play()
+			#velocity.y = JUMP_VELOCITY
+			#jumps_left -= 1 
 
 
 # Handle attack
@@ -163,11 +166,11 @@ func _on_dash_cooldown_timeout():
 
 
 func _on_sword_area_body_entered(body):
-	#if is_attack and body.is_in_group("enemies"):
-		#if body.has_method("take_damage"):
-			#body.take_damage(1)
-			
 	if body.has_method("take_damage"):
 		# Calculate knockback direction
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.take_damage(attack_damage, knockback_direction * attack_knockback_force)
+		
+	#if is_attack and body.is_in_group("enemies"):
+		#if body.has_method("take_damage"):
+			#body.take_damage(1)

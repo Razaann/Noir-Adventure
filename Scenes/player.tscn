@@ -2,7 +2,7 @@
 
 [ext_resource type="SpriteFrames" uid="uid://5k0vuax1b7ni" path="res://Scenes/PlayerAnim.tres" id="1_f3ocw"]
 [ext_resource type="Script" uid="uid://cfh0mobad77ud" path="res://Codes/player.gd" id="1_ni73s"]
-[ext_resource type="Shape2D" uid="uid://d31en28sumuvq" path="res://Scenes/PlayerCol.tres" id="2_wvkwn"]
+[ext_resource type="Shape2D" uid="uid://cy41pte84fvd0" path="res://Scenes/Player2Col.tres" id="3_fkybt"]
 [ext_resource type="AudioStream" uid="uid://fqykq2oqlpr4" path="res://Assets/Sound/Jump.wav" id="4_vgqql"]
 [ext_resource type="AudioStream" uid="uid://d0x3437cxlpgv" path="res://Assets/Sound/attack.wav" id="5_fkybt"]
 
@@ -15,11 +15,11 @@ script = ExtResource("1_ni73s")
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = ExtResource("1_f3ocw")
-animation = &"attack"
+animation = &"hurt"
 
 [node name="PlayerCol" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
-shape = ExtResource("2_wvkwn")
+shape = ExtResource("3_fkybt")
 
 [node name="SwordArea" type="Area2D" parent="." groups=["enemies"]]
 
