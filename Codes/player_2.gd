@@ -106,7 +106,7 @@ func update_animations():
 func _on_attack_area_body_entered(body):
 	if body.has_method("take_damage"):
 		var knockback_direction = (body.global_position - global_position).normalized()
-		body.take_damage(attack_damage, knockback_direction * attack_knockback_force)
+		body.take_damage(attack_damage, knockback_direction * attack_knockback_force, body)
 
 # Called when touching enemy
 func _on_detection_area_body_entered(body):
@@ -130,6 +130,7 @@ func take_damage(amount: int, knockback_direction: Vector2):
 		velocity.y = -150 # small upward knockback
 	else:
 		die()
+			# THIS THING F UP NEED TO DELETE THE PLAYER COL
 		is_knocked_back = true
 		knockback_timer = knockback_duration
 		velocity.x = knockback_direction.x * player_knockback_force
