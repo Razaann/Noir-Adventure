@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 300.0
-@export var jump_velocity = -400.0
+@export var speed = 100.0
+@export var jump_velocity = -300.0
 @export var attack_range = 100.0
 @export var attack_damage = 1
 @export var attack_knockback_force = 500.0
@@ -11,7 +11,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
 @onready var attack_collision = $AttackArea/CollisionShape2D
-@onready var player_collision = $CollisionShape2D
+@onready var player_collision = $PlayerCol
 @onready var detection_area = $DetectArea
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -27,6 +27,9 @@ var is_knocked_back = false
 var knockback_timer = 0.0
 var knockback_duration = 0.3
 
+# For Block All Input
+var is_dead = false
+
 func _ready():
 	current_health = max_health
 	attack_collision.disabled = true
@@ -34,6 +37,10 @@ func _ready():
 	detection_area.body_entered.connect(_on_detection_area_body_entered)
 
 func _physics_process(delta):
+	if is_dead:
+		move_and_slide() # still allow gravity to pull player down
+		return
+	
 	# Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -48,7 +55,7 @@ func _physics_process(delta):
 			is_knocked_back = false
 	else:
 		# Jump
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = jump_velocity
 		
 		# Attack
@@ -106,7 +113,7 @@ func update_animations():
 func _on_attack_area_body_entered(body):
 	if body.has_method("take_damage"):
 		var knockback_direction = (body.global_position - global_position).normalized()
-		body.take_damage(attack_damage, knockback_direction * attack_knockback_force, body)
+		body.take_damage(attack_damage, knockback_direction * attack_knockback_force)
 
 # Called when touching enemy
 func _on_detection_area_body_entered(body):
@@ -116,7 +123,7 @@ func _on_detection_area_body_entered(body):
 
 # Take damage from enemy
 func take_damage(amount: int, knockback_direction: Vector2):
-	if is_knocked_back:
+	if is_knocked_back or is_dead:
 		return # Ignore if already being knocked back
 
 	current_health -= amount
@@ -129,18 +136,32 @@ func take_damage(amount: int, knockback_direction: Vector2):
 		velocity.x = knockback_direction.x * player_knockback_force
 		velocity.y = -150 # small upward knockback
 	else:
-		die()
+		die(knockback_direction)
 			# THIS THING F UP NEED TO DELETE THE PLAYER COL
-		is_knocked_back = true
-		knockback_timer = knockback_duration
-		velocity.x = knockback_direction.x * player_knockback_force
-		velocity.y = -150 # small upward knockback
-		Engine.time_scale = 0.5
-		await get_tree().create_timer(0.5).timeout
-		Engine.time_scale = 1.0
-		get_tree().reload_current_scene()
+		#is_knocked_back = true
+		#knockback_timer = knockback_duration
+		#velocity.x = knockback_direction.x * player_knockback_force
+		#velocity.y = -150 # small upward knockback
+		#Engine.time_scale = 0.5
+		#player_collision.queue_free() # or player_collision.disabled = true
+		#await get_tree().create_timer(0.5).timeout
+		#Engine.time_scale = 1.0
+		#get_tree().reload_current_scene()
 
-func die():
+func die(knockback_direction: Vector2):
+	is_dead = false
 	velocity = Vector2.ZERO
 	animated_sprite.play("death")
+	player_collision.queue_free() # or player_collision.disabled = true
 	
+	# Optional knockback effect on death
+	is_knocked_back = true
+	knockback_timer = knockback_duration
+	velocity.x = knockback_direction.x * player_knockback_force
+	velocity.y = -150
+	
+	# Slow Mo & reload scene
+	Engine.time_scale = 0.5
+	await get_tree().create_timer(0.5).timeout
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene()

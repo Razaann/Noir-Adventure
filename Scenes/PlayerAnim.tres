@@ -177,6 +177,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w2ot2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2ot2")
 }],
 "loop": false,
 "name": &"hurt",
