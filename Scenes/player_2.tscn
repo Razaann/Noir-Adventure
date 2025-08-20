@@ -16,7 +16,7 @@ script = ExtResource("1_638yb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = ExtResource("1_8wxk8")
-animation = &"death"
+animation = &"hurt"
 autoplay = "idle"
 
 [node name="PlayerCol" type="CollisionShape2D" parent="."]

@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -300.0
 @export var attack_damage = 1
 @export var attack_knockback_force = 300.0
 @export var player_knockback_force = 200.0
+@export var max_health = 3
 
 # Nodes
 @onready var player_anim = $PlayerAnim
@@ -14,7 +15,8 @@ const JUMP_VELOCITY = -300.0
 @onready var sword_col = $SwordArea/SwordCol
 @onready var jump_sfx = $JumpSFX
 @onready var attack_sfx = $AttackSFX
-
+@onready var player_collision = $PlayerCol
+@onready var detection_area = $DetectArea
 
 # For dash
 var is_dash = false
@@ -27,90 +29,88 @@ var jumps_left = 0
 # For attack
 var is_attack = false
 
+# Health
+var current_health: int
+var is_dead = false
+
+# Knockback
+var is_knocked_back = false
+var knockback_timer = 0.0
+var knockback_duration = 0.3
+
+func _ready():
+	sword_col.disabled = true
+	current_health = max_health
+
 func _physics_process(delta):
+	if is_dead:
+		move_and_slide() # still allow gravity to pull down
+		return
+	
 	var direction = Input.get_axis("move_left", "move_right")
 	
-	# Handle gravity
+	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	# Handle animation & jump
-	set_animation(direction)
-	jump()
-	
-	# Handle dash
-	if Input.is_action_just_pressed("dash") and can_dash:
-		if player_anim.flip_h:
-			dashDirection = -1 
-		else:
-			dashDirection = 1
-		
-		is_dash = true
-		can_dash = false
-		dash_duration.start()
-		dash_cooldown.start(1.0)
-	
-	if is_dash:
-		velocity.x = dashDirection * SPEED * 3
-		velocity.y = 0
-	elif is_attack:
-		velocity.x = 0
+	# Knockback
+	if is_knocked_back:
+		knockback_timer -= delta
+		if knockback_timer <= 0:
+			is_knocked_back = false
 	else:
-		if direction:
-			if direction > 0:
-				player_anim.flip_h = false
-				sword_area.position.x = 16 # To the right
-				velocity.x = direction * SPEED
-			elif direction < 0:
-				player_anim.flip_h = true
-				sword_area.position.x = -16 # To the left
-				velocity.x = direction * SPEED
+		# Animation & jump
+		set_animation(direction)
+		jump()
+		
+		# Dash
+		if Input.is_action_just_pressed("dash") and can_dash:
+			if player_anim.flip_h:
+				dashDirection = -1 
+			else:
+				dashDirection = 1
+			
+			is_dash = true
+			can_dash = false
+			dash_duration.start()
+			dash_cooldown.start(1.0)
+		
+		if is_dash:
+			velocity.x = dashDirection * SPEED * 3
+			velocity.y = 0
+		elif is_attack:
+			velocity.x = 0
 		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	
-	if Input.is_action_just_pressed("attack") and not is_attack:
-		attack()
+			if direction:
+				if direction > 0:
+					player_anim.flip_h = false
+					sword_area.position.x = 16
+					velocity.x = direction * SPEED
+				elif direction < 0:
+					player_anim.flip_h = true
+					sword_area.position.x = -16
+					velocity.x = direction * SPEED
+			else:
+				velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+		# Attack
+		if Input.is_action_just_pressed("attack") and not is_attack:
+			attack()
 	
 	move_and_slide()
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	sword_col.disabled = true
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-# Handle jump
+# Jump handling
 func jump():
-	# Im thinking for making the double jump is accessable after interact with the power up
-	# by making the if nested, and check the boolean
-	
-	# Handle double jump
-	# If on the floor reset the total jumps left
 	if is_on_floor():
 		jumps_left = 2
 	
-	if jumps_left > 0 && velocity.y >= 0.0:
+	if jumps_left > 0 and velocity.y >= 0.0:
 		if Input.is_action_just_pressed("jump"):
 			jump_sfx.play()
 			velocity.y = JUMP_VELOCITY
 			jumps_left -= 1 
-	
-	# If i want to use diffent SFX on the second jump
-	
-	#elif jumps_left == 1 && velocity.y >= 0.0:
-		#if Input.is_action_just_pressed("jump"):
-			#jump_sfx.play()
-			#velocity.y = JUMP_VELOCITY
-			#jumps_left -= 1 
 
-
-# Handle attack
+# Attack handling
 func attack():
 	if is_on_floor():
 		is_attack = true
@@ -126,23 +126,22 @@ func attack():
 		sword_col.disabled = true
 		is_attack = false
 
-
-# Handle dash
-func dash():
-	pass
-
-
-# Handle animations
+# Animations
 func set_animation(direction):
+	if is_dead:
+		player_anim.play("death")
+		return
+	
 	if is_dash:
 		player_anim.play("dash")
 		return
-	#elif is_dash and is_on_floor():
-		#player_anim.play("dash")
-		#return
 	
 	if is_attack and is_on_floor():
 		player_anim.play("attack")
+		return
+	
+	if is_knocked_back:
+		player_anim.play("hurt")
 		return
 	
 	if is_on_floor():
@@ -156,21 +155,57 @@ func set_animation(direction):
 		elif velocity.y > 0:
 			player_anim.play("fall")
 
-
+# Dash timers
 func _on_dash_duration_timeout():
 	is_dash = false
-
 
 func _on_dash_cooldown_timeout():
 	can_dash = true
 
-
+# Sword hitting enemies
 func _on_sword_area_body_entered(body):
 	if body.has_method("take_damage"):
-		# Calculate knockback direction
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.take_damage(attack_damage, knockback_direction * attack_knockback_force)
-		
-	#if is_attack and body.is_in_group("enemies"):
-		#if body.has_method("take_damage"):
-			#body.take_damage(1)
+
+# Detect enemy body collision (player takes damage)
+func _on_detect_area_body_entered(body):
+	if body.has_method("is_enemy") and body.is_enemy():
+		var knockback_direction = (global_position - body.global_position).normalized()
+		take_damage(1, knockback_direction)
+
+# Player takes damage
+func take_damage(amount: int, knockback_direction: Vector2):
+	if is_knocked_back or is_dead:
+		return
+	
+	current_health -= amount
+	print("Player health: ", current_health)
+	
+	if current_health > 0:
+		# Knockback
+		is_knocked_back = true
+		knockback_timer = knockback_duration
+		velocity.x = knockback_direction.x * player_knockback_force
+		velocity.y = -150 # small upward knockback
+	else:
+		die(knockback_direction)
+
+# Death handling
+func die(knockback_direction: Vector2):
+	is_dead = true
+	velocity = Vector2.ZERO
+	player_anim.play("death")
+	player_collision.queue_free()
+	
+	# Knockback effect on death
+	is_knocked_back = true
+	knockback_timer = knockback_duration
+	velocity.x = knockback_direction.x * player_knockback_force
+	velocity.y = -150
+	
+	# Slow Mo & reload scene
+	Engine.time_scale = 0.5
+	await get_tree().create_timer(0.5).timeout
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene()

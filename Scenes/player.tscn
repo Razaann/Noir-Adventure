@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7cqxasj1xdtp"]
+[gd_scene load_steps=8 format=3 uid="uid://c7cqxasj1xdtp"]
 
 [ext_resource type="SpriteFrames" uid="uid://5k0vuax1b7ni" path="res://Scenes/PlayerAnim.tres" id="1_f3ocw"]
 [ext_resource type="Script" uid="uid://cfh0mobad77ud" path="res://Codes/player.gd" id="1_ni73s"]
@@ -9,13 +9,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni73s"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
+size = Vector2(12, 16)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ni73s")
 
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = ExtResource("1_f3ocw")
-animation = &"hurt"
+animation = &"idle"
 
 [node name="PlayerCol" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
@@ -27,6 +30,13 @@ shape = ExtResource("3_fkybt")
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_ni73s")
 debug_color = Color(0.776056, 0.140232, 1, 0.42)
+
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="DetectCol" type="CollisionShape2D" parent="DetectArea"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_fkybt")
+debug_color = Color(0.948772, 3.65794e-06, 0.576708, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
@@ -50,5 +60,6 @@ stream = ExtResource("5_fkybt")
 volume_db = 3.0
 
 [connection signal="body_entered" from="SwordArea" to="." method="_on_sword_area_body_entered"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
 [connection signal="timeout" from="DashDuration" to="." method="_on_dash_duration_timeout"]
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]

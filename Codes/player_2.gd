@@ -101,7 +101,7 @@ func perform_attack():
 func update_animations():
 	if is_attacking:
 		return
-	if is_knocked_back:
+	if is_knocked_back: # Death Animations still fucked
 		animated_sprite.play("hurt")
 	elif not is_on_floor():
 		animated_sprite.play("jump")
