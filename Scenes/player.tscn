@@ -27,7 +27,7 @@ shape = ExtResource("3_fkybt")
 [node name="SwordArea" type="Area2D" parent="." groups=["enemies"]]
 
 [node name="SwordCol" type="CollisionShape2D" parent="SwordArea"]
-position = Vector2(0, -8)
+position = Vector2(16, -8)
 shape = SubResource("RectangleShape2D_ni73s")
 debug_color = Color(0.776056, 0.140232, 1, 0.42)
 

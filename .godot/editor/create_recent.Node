@@ -1,3 +1,5 @@
+Button
+Label
 CollisionShape2D
 Area2D
 Node
@@ -11,4 +13,3 @@ RemoteTransform2D
 AnimatableBody2D
 PathFollow2D
 Path2D
-CanvasLayer

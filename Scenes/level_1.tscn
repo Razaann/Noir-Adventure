@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://blyrcljrr6ncm"]
 
 [ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_vk57k"]
-[ext_resource type="PackedScene" uid="uid://dxeiu0imsq7g4" path="res://Scenes/player_2.tscn" id="3_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/player.tscn" id="3_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://t04akogpawxn" path="res://Scenes/slime_2.tscn" id="3_xfk5q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
@@ -504,4 +504,4 @@ tile_set = SubResource("TileSet_xfk5q")
 [node name="Slime2" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-112, 0)
 
-[node name="Player2" parent="." instance=ExtResource("3_7p6j4")]
+[node name="Player" parent="." instance=ExtResource("3_7p6j4")]

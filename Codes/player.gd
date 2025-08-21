@@ -84,11 +84,11 @@ func _physics_process(delta):
 			if direction:
 				if direction > 0:
 					player_anim.flip_h = false
-					sword_area.position.x = 16
+					sword_area.position.x = 0
 					velocity.x = direction * SPEED
 				elif direction < 0:
 					player_anim.flip_h = true
-					sword_area.position.x = -16
+					sword_area.position.x = -32
 					velocity.x = direction * SPEED
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -202,10 +202,10 @@ func die(knockback_direction: Vector2):
 	is_knocked_back = true
 	knockback_timer = knockback_duration
 	velocity.x = knockback_direction.x * player_knockback_force
-	velocity.y = -150
+	velocity.y = -100
 	
 	# Slow Mo & reload scene
 	Engine.time_scale = 0.5
 	await get_tree().create_timer(0.5).timeout
 	Engine.time_scale = 1.0
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")

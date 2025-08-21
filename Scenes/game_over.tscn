@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuy6qvo1lcrag"]
+
+[ext_resource type="Script" uid="uid://lltvjapsosd2" path="res://Codes/game_over.gd" id="1_8fo1c"]
+[ext_resource type="FontFile" uid="uid://d376n34o58e5b" path="res://Assets/Sprite/Font/PIXBOB TALL LITE.otf" id="1_ojehl"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8fo1c")
+
+[node name="GameOverLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("1_ojehl")
+theme_override_font_sizes/font_size = 100
+text = "YOU DIED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 832.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("1_ojehl")
+theme_override_font_sizes/font_size = 40
+text = "Youve done great"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 448.0
+offset_right = 768.0
+offset_bottom = 509.0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ojehl")
+theme_override_font_sizes/font_size = 60
+text = "Restart"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
