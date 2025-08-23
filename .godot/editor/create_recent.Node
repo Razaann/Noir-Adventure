@@ -1,6 +1,9 @@
+ParallaxBackground
+Sprite2D
+ParallaxLayer
+CollisionShape2D
 Button
 Label
-CollisionShape2D
 Area2D
 Node
 AudioStreamPlayer2D
@@ -8,8 +11,4 @@ ColorRect
 AnimatedSprite2D
 CharacterBody2D
 AnimationPlayer
-Sprite2D
 RemoteTransform2D
-AnimatableBody2D
-PathFollow2D
-Path2D

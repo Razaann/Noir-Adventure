@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d376n34o58e5b"
-path="res://.godot/imported/PIXBOB TALL LITE.otf-d9c13af74e4854ee365ef039c94dbd67.fontdata"
+path="res://.godot/imported/PIXBOB TALL LITE.otf-e885deeaee52174d7ceeb5fa33a86fe5.fontdata"
 
 [deps]
 
-source_file="res://Assets/Sprite/Font/PIXBOB TALL LITE.otf"
-dest_files=["res://.godot/imported/PIXBOB TALL LITE.otf-d9c13af74e4854ee365ef039c94dbd67.fontdata"]
+source_file="res://Assets/Font/PIXBOB TALL LITE.otf"
+dest_files=["res://.godot/imported/PIXBOB TALL LITE.otf-e885deeaee52174d7ceeb5fa33a86fe5.fontdata"]
 
 [params]
 

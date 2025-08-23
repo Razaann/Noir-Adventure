@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://byiohoj8165gc" path="res://Scenes/moving_platfrom.tscn" id="4_1q6tm"]
 [ext_resource type="PackedScene" uid="uid://t04akogpawxn" path="res://Scenes/slime_2.tscn" id="5_v36qu"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smnlx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v36qu"]
 texture = ExtResource("1_v3rpw")
 1:0/0 = 0
 2:0/0 = 0
@@ -495,7 +495,7 @@ texture = ExtResource("1_v3rpw")
 
 [sub_resource type="TileSet" id="TileSet_12fag"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_smnlx")
+sources/0 = SubResource("TileSetAtlasSource_v36qu")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1q6tm"]
 
