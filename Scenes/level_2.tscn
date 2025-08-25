@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://dbcog53xdv4kc"]
+[gd_scene load_steps=13 format=4 uid="uid://dbcog53xdv4kc"]
 
 [ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/player.tscn" id="2_smnlx"]
 [ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/killzone.tscn" id="3_12fag"]
 [ext_resource type="PackedScene" uid="uid://byiohoj8165gc" path="res://Scenes/moving_platfrom.tscn" id="4_1q6tm"]
 [ext_resource type="PackedScene" uid="uid://t04akogpawxn" path="res://Scenes/slime_2.tscn" id="5_v36qu"]
+[ext_resource type="PackedScene" uid="uid://ch1bius5aq2se" path="res://Scenes/parallax.tscn" id="6_cggpd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v36qu"]
 texture = ExtResource("1_v3rpw")
@@ -524,6 +525,8 @@ tile_map_data = PackedByteArray("AAD//wAAAAALAA0AAAAAAAAAAAALAA0AAAD+/wAAAAALAA0
 tile_set = SubResource("TileSet_12fag")
 
 [node name="Player" parent="." instance=ExtResource("2_smnlx")]
+
+[node name="Parallax" parent="Player" instance=ExtResource("6_cggpd")]
 
 [node name="Killzone" parent="." instance=ExtResource("3_12fag")]
 position = Vector2(0, 200)

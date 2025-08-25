@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch1bius5aq2se"]
 
-[ext_resource type="Texture2D" uid="uid://bi8j3x7nwcmed" path="res://Assets/Sprite/ParaBG/parallax-demon-woods-bg.png" id="1_acil8"]
-[ext_resource type="Texture2D" uid="uid://dcwr5wqmup82p" path="res://Assets/Sprite/ParaBG/parallax-demon-woods-far-trees.png" id="2_1rrkq"]
-[ext_resource type="Texture2D" uid="uid://dn13eeuk7suho" path="res://Assets/Sprite/ParaBG/parallax-demon-woods-mid-trees.png" id="3_ngbw4"]
-[ext_resource type="Texture2D" uid="uid://67g1wjxnfq2r" path="res://Assets/Sprite/ParaBG/parallax-demon-woods-close-trees.png" id="4_hd2e0"]
+[ext_resource type="Texture2D" uid="uid://0ljjxsyj58qf" path="res://Assets/Sprite/parralla/sprite_1.png" id="1_acil8"]
+[ext_resource type="Texture2D" uid="uid://b8oudh7tnv367" path="res://Assets/Sprite/parralla/sprite_2.png" id="2_acil8"]
+[ext_resource type="Texture2D" uid="uid://c10wviqwxsfdr" path="res://Assets/Sprite/parralla/sprite_3.png" id="3_1rrkq"]
+[ext_resource type="Texture2D" uid="uid://dwxeivgo6bbt4" path="res://Assets/Sprite/parralla/sprite_4.png" id="4_ngbw4"]
 
 [node name="Parallax" type="Node2D"]
 
@@ -14,7 +14,8 @@ motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG"]
-scale = Vector2(1.23333, 1)
+position = Vector2(34.5328, 0)
+scale = Vector2(1.11667, 1)
 texture = ExtResource("1_acil8")
 
 [node name="Far" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -22,18 +23,18 @@ motion_scale = Vector2(0.2, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Far"]
-texture = ExtResource("2_1rrkq")
+texture = ExtResource("2_acil8")
 
 [node name="Mid" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mid"]
-texture = ExtResource("3_ngbw4")
+texture = ExtResource("3_1rrkq")
 
 [node name="Close" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.8, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Close"]
-texture = ExtResource("4_hd2e0")
+texture = ExtResource("4_ngbw4")

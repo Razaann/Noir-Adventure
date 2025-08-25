@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://dao5dvwjib0ja"]
+[gd_scene load_steps=8 format=4 uid="uid://dao5dvwjib0ja"]
 
 [ext_resource type="Texture2D" uid="uid://bq8mryrtchfvp" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_packed.png" id="1_ng0s0"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/player.tscn" id="2_g5cw1"]
 [ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/killzone.tscn" id="3_76ybr"]
+[ext_resource type="PackedScene" uid="uid://ch1bius5aq2se" path="res://Scenes/parallax.tscn" id="4_s8nj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76ybr"]
 texture = ExtResource("1_ng0s0")
@@ -510,3 +511,6 @@ position = Vector2(0, 192)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_s8nj6")
+
+[node name="Parallax" parent="." instance=ExtResource("4_s8nj6")]
+position = Vector2(-40, 120)
