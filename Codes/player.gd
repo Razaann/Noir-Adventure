@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 75.0
+const JUMP_VELOCITY = -250.0
 @export var attack_damage = 1
 @export var attack_knockback_force = 300.0
 @export var player_knockback_force = 200.0
@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -300.0
 
 # Nodes
 @onready var player_anim = $PlayerAnim
+@onready var slash_effect = $SlashEffect
 @onready var dash_duration = $DashDuration
 @onready var dash_cooldown = $DashCooldown
 @onready var sword_area = $SwordArea
@@ -76,7 +77,7 @@ func _physics_process(delta):
 			dash_cooldown.start(1.0)
 		
 		if is_dash:
-			velocity.x = dashDirection * SPEED * 3
+			velocity.x = dashDirection * (SPEED * 1.5) * 2
 			velocity.y = 0
 		elif is_attack:
 			velocity.x = 0
@@ -84,10 +85,14 @@ func _physics_process(delta):
 			if direction:
 				if direction > 0:
 					player_anim.flip_h = false
+					slash_effect.flip_h = false
+					slash_effect.position.x = 16
 					sword_area.position.x = 0
 					velocity.x = direction * SPEED
 				elif direction < 0:
 					player_anim.flip_h = true
+					slash_effect.flip_h = true
+					slash_effect.position.x = -16
 					sword_area.position.x = -32
 					velocity.x = direction * SPEED
 			else:
@@ -112,19 +117,28 @@ func jump():
 
 # Attack handling
 func attack():
-	if is_on_floor():
+	if is_on_floor() and not is_attack:
 		is_attack = true
 		player_anim.play("attack")
+		
+		# restart slash effect every time
+		slash_effect.visible = true
+		slash_effect.stop()
+		slash_effect.play("attack")
+		
 		attack_sfx.play()
 		
 		sword_area.monitoring = true
 		sword_col.disabled = false
 		
-		await get_tree().create_timer(0.3).timeout
+		# wait until animation done (better than fixed timer)
+		await slash_effect.animation_finished
 		
+		slash_effect.visible = false
 		sword_area.monitoring = false
 		sword_col.disabled = true
 		is_attack = false
+
 
 # Animations
 func set_animation(direction):
