@@ -93,7 +93,7 @@ func _physics_process(delta):
 					player_anim.flip_h = true
 					slash_effect.flip_h = true
 					slash_effect.position.x = -16
-					sword_area.position.x = -32
+					sword_area.position.x = -30
 					velocity.x = direction * SPEED
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)

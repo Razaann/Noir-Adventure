@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buyyicxmf5a18"
-path="res://.godot/imported/Crate-animated.png-58ec036eca3e2b982ee01539f20fdf37.ctex"
+uid="uid://ct06ll5aqapvc"
+path="res://.godot/imported/slime_spritesheet.png-4ecff7600257eb27e5d35a471c7ac352.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/SeanMakesGames/Interactables/Crate-animated.png"
-dest_files=["res://.godot/imported/Crate-animated.png-58ec036eca3e2b982ee01539f20fdf37.ctex"]
+source_file="res://Assets/Sprite/MetroidvaniaAsset/Enemies/slime_spritesheet.png"
+dest_files=["res://.godot/imported/slime_spritesheet.png-4ecff7600257eb27e5d35a471c7ac352.ctex"]
 
 [params]
 

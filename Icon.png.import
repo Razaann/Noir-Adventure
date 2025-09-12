@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qw663oejfbnm"
-path="res://.godot/imported/temporaryPlatform.png-205c9ec990dfff292deada678de3ae88.ctex"
+uid="uid://gigf2223amdj"
+path="res://.godot/imported/Icon.png-33e63688031d53466d4d656c73cf10ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Remaking_hollow_knight_assets/Assets/Interactables/Sprites/temporaryPlatform.png"
-dest_files=["res://.godot/imported/temporaryPlatform.png-205c9ec990dfff292deada678de3ae88.ctex"]
+source_file="res://Icon.png"
+dest_files=["res://.godot/imported/Icon.png-33e63688031d53466d4d656c73cf10ca.ctex"]
 
 [params]
 

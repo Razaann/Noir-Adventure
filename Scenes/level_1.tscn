@@ -507,6 +507,7 @@ tile_set = SubResource("TileSet_xfk5q")
 position = Vector2(0, -64)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 8)
 zoom = Vector2(2.5, 2.5)
 limit_smoothed = true
 position_smoothing_enabled = true

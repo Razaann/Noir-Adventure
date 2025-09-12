@@ -39,7 +39,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tx1dd"]
@@ -60,6 +60,8 @@ position = Vector2(0, -8)
 sprite_frames = ExtResource("2_fkybt")
 animation = &"attack"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="SlashEffect" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -76,12 +78,11 @@ metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="SwordCol" type="CollisionShape2D" parent="SwordArea"]
-position = Vector2(16, -8)
+position = Vector2(15, -8)
 shape = SubResource("RectangleShape2D_ni73s")
 debug_color = Color(0.776056, 0.140232, 1, 0.42)
 
 [node name="DetectArea" type="Area2D" parent="."]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="DetectCol" type="CollisionShape2D" parent="DetectArea"]
