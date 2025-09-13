@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 75.0
-const JUMP_VELOCITY = -250.0
+const JUMP_VELOCITY = -275.0 # -250
 @export var attack_damage = 1
 @export var attack_knockback_force = 300.0
 @export var player_knockback_force = 200.0

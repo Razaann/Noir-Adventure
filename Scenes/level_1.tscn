@@ -506,16 +506,16 @@ tile_set = SubResource("TileSet_xfk5q")
 [node name="Player" parent="." instance=ExtResource("3_7p6j4")]
 position = Vector2(0, -64)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 8)
-zoom = Vector2(2.5, 2.5)
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
-
 [node name="Killzone" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(0, 128)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_7p6j4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -8)
+zoom = Vector2(2.5, 2.5)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
