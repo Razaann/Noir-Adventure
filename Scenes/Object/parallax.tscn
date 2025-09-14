@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch1bius5aq2se"]
 
-[ext_resource type="Texture2D" uid="uid://bscn5p0pb8lcs" path="res://Assets/Sprite/parralla/sprite_5.png" id="1_acil8"]
-[ext_resource type="Texture2D" uid="uid://b8oudh7tnv367" path="res://Assets/Sprite/parralla/sprite_2.png" id="2_acil8"]
-[ext_resource type="Texture2D" uid="uid://c10wviqwxsfdr" path="res://Assets/Sprite/parralla/sprite_3.png" id="3_1rrkq"]
-[ext_resource type="Texture2D" uid="uid://dwxeivgo6bbt4" path="res://Assets/Sprite/parralla/sprite_4.png" id="4_ngbw4"]
+[ext_resource type="Texture2D" uid="uid://dt3ar4651j0ge" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/background.png" id="1_acil8"]
+[ext_resource type="Texture2D" uid="uid://bvxvmllpxkb3f" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/bg_0.png" id="2_1rrkq"]
+[ext_resource type="Texture2D" uid="uid://bcomrm0xolea0" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/bg_1.png" id="3_ngbw4"]
+[ext_resource type="Texture2D" uid="uid://bl86l31i6g4aj" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/bg_2.png" id="4_hd2e0"]
 
 [node name="Parallax" type="Node2D"]
 
@@ -23,18 +23,18 @@ motion_scale = Vector2(0.2, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Far"]
-texture = ExtResource("2_acil8")
+texture = ExtResource("2_1rrkq")
 
 [node name="Mid" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mid"]
-texture = ExtResource("3_1rrkq")
+texture = ExtResource("3_ngbw4")
 
 [node name="Close" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.8, 0)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Close"]
-texture = ExtResource("4_ngbw4")
+texture = ExtResource("4_hd2e0")

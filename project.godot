@@ -17,7 +17,7 @@ config/icon="uid://gigf2223amdj"
 
 [autoload]
 
-TransitionManager="*res://Scenes/transition.tscn"
+TransitionManager="*res://Scenes/Object/transition.tscn"
 
 [display]
 

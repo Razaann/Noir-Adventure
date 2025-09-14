@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 75.0
-const JUMP_VELOCITY = -275.0 # -250
+const JUMP_VELOCITY = -250.0 # -250
 @export var attack_damage = 1
 @export var attack_knockback_force = 300.0
 @export var player_knockback_force = 200.0
@@ -29,6 +29,7 @@ var jumps_left = 0
 
 # For attack
 var is_attack = false
+var tween: Tween
 
 # Health
 var current_health: int
@@ -116,22 +117,34 @@ func jump():
 			jumps_left -= 1 
 
 # Attack handling
+
 func attack():
 	if is_on_floor() and not is_attack:
 		is_attack = true
 		player_anim.play("attack")
 		
-		# restart slash effect every time
+		var dir
+		
+		if player_anim.flip_h == false :
+			dir = 1
+		else:
+			dir = -1
+			
+		var offset = 8 * dir   # lunge distance in px
+		
+		# tween a quick step forward
+		tween = get_tree().create_tween()
+		tween.tween_property(self, "position:x", position.x + offset, 0.1)
+		
+		# restart slash effect
 		slash_effect.visible = true
 		slash_effect.stop()
 		slash_effect.play("attack")
 		
 		attack_sfx.play()
-		
 		sword_area.monitoring = true
 		sword_col.disabled = false
 		
-		# wait until animation done (better than fixed timer)
 		await slash_effect.animation_finished
 		
 		slash_effect.visible = false

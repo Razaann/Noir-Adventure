@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c7cqxasj1xdtp"]
 
 [ext_resource type="Script" uid="uid://cfh0mobad77ud" path="res://Codes/player.gd" id="1_ni73s"]
-[ext_resource type="SpriteFrames" uid="uid://bsw2axaxqmuly" path="res://Scenes/PlayerAnimHood.tres" id="2_fkybt"]
+[ext_resource type="SpriteFrames" uid="uid://bsw2axaxqmuly" path="res://Scenes/Object/PlayerAnimHood.tres" id="2_fkybt"]
 [ext_resource type="Texture2D" uid="uid://chmnidp7xjaes" path="res://Assets/Sprite/MetroidvaniaAsset/Char/herochar_spritesheet(new).png" id="2_vgqql"]
 [ext_resource type="AudioStream" uid="uid://fqykq2oqlpr4" path="res://Assets/Sound/Jump.wav" id="4_vgqql"]
 [ext_resource type="AudioStream" uid="uid://d0x3437cxlpgv" path="res://Assets/Sound/attack.wav" id="5_fkybt"]

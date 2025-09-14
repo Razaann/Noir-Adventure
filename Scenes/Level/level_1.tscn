@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=4 uid="uid://blyrcljrr6ncm"]
+
+[ext_resource type="TileSet" uid="uid://cs318rfppktfn" path="res://Scenes/Object/level_tile.tres" id="1_m5hwo"]
+[ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/Character/player.tscn" id="2_wtlyx"]
+[ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/Object/killzone.tscn" id="3_knogg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7p6j4"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD5//v/AQABAAIAAAD6//v/AQABAAIAAAD7//v/AQABAAIAAAD8//v/AQABAAIAAAD9//v/AQABAAIAAAACAPv/AQABAAIAAAADAPv/AQABAAIAAAAEAPv/AQABAAIAAAAFAPv/AQABAAIAAAAGAPv/AQABAAIAAAD9/wMAAQAAAAAAAAD+/wMAAQABAAAAAAD//wMAAQABAAAAAAACAAMAAQACAAAAAAAAAAMAAQABAAAAAAABAAMAAQABAAAAAAD4//v/AQAAAAIAAAD3//z/AQACAAEAAAD3//3/AQACAAEAAAD3//7/AQACAAEAAAD3////AQACAAEAAAD3/wAAAQACAAEAAAD3/wEAAQACAAEAAAD3/wIAAQACAAEAAAAIAPz/AQAAAAEAAAAIAP3/AQAAAAEAAAAIAP7/AQAAAAEAAAAIAP//AQAAAAEAAAAIAAAAAQAAAAEAAAAIAAEAAQAAAAEAAAAIAAIAAQAAAAEAAAAHAPv/AQACAAIAAAD+//v/AQACAAIAAAABAPv/AQAAAAIAAAAGAAMAAQAAAAAAAAAHAAMAAQABAAAAAAD4/wMAAQACAAAAAAA=")
+tile_set = ExtResource("1_m5hwo")
+
+[node name="Player" parent="." instance=ExtResource("2_wtlyx")]
+position = Vector2(0, -64)
+
+[node name="Killzone" parent="." instance=ExtResource("3_knogg")]
+position = Vector2(0, 128)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_7p6j4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -8)
+zoom = Vector2(2.5, 2.5)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
