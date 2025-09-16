@@ -1,14 +1,14 @@
+Button
+VBoxContainer
+Control
 Camera2D
 AnimatedSprite2D
 CollisionShape2D
 ParallaxBackground
 Sprite2D
 ParallaxLayer
-Button
 Label
 Area2D
 Node
 AudioStreamPlayer2D
 ColorRect
-CharacterBody2D
-AnimationPlayer

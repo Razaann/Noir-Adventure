@@ -123,18 +123,19 @@ func attack():
 		is_attack = true
 		player_anim.play("attack")
 		
-		var dir
-		
-		if player_anim.flip_h == false :
-			dir = 1
-		else:
-			dir = -1
-			
-		var offset = 8 * dir   # lunge distance in px
-		
-		# tween a quick step forward
-		tween = get_tree().create_tween()
-		tween.tween_property(self, "position:x", position.x + offset, 0.1)
+		# If i want the player slighty nudge after each attack
+		#var dir
+		#
+		#if player_anim.flip_h == false :
+			#dir = 1
+		#else:
+			#dir = -1
+			#
+		#var offset = 8 * dir   # lunge distance in px
+		#
+		## tween a quick step forward
+		#tween = get_tree().create_tween()
+		#tween.tween_property(self, "position:x", position.x + offset, 0.1)
 		
 		# restart slash effect
 		slash_effect.visible = true
