@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://byiohoj8165gc"]
 
 [ext_resource type="Script" uid="uid://58uvttawhv2f" path="res://Codes/moving_platfrom.gd" id="1_10w73"]
-[ext_resource type="Texture2D" uid="uid://bq6d1gmjvd34h" path="res://Assets/Sprite/1 bit kenney/monochrome_tilemap_transparent_packed.png" id="2_10w73"]
+[ext_resource type="Texture2D" uid="uid://vpjsxrrpjlx5" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/wood_slab_middle.png" id="2_ygrx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10w73"]
-size = Vector2(48, 16)
+size = Vector2(16, 8)
 
 [sub_resource type="Animation" id="Animation_10w73"]
 length = 0.001
@@ -58,14 +58,14 @@ remote_path = NodePath("../../AnimatableBody2D")
 position = Vector2(6.67676, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
-position = Vector2(-6.67676, 0)
-texture = ExtResource("2_10w73")
+position = Vector2(-6.67676, -4)
+texture = ExtResource("2_ygrx7")
 region_enabled = true
-region_rect = Rect2(64, 64, 48, 16)
+region_rect = Rect2(0, 0, 16, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 z_index = 2
-position = Vector2(-6.67676, 0)
+position = Vector2(-6.67676, -4)
 shape = SubResource("RectangleShape2D_10w73")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

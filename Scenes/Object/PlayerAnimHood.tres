@@ -2,21 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://chmnidp7xjaes" path="res://Assets/Sprite/MetroidvaniaAsset/Char/herochar_spritesheet(new).png" id="1_dalmt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_timvc"]
 atlas = ExtResource("1_dalmt")
-region = Rect2(0, 64, 16, 16)
+region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctxol"]
 atlas = ExtResource("1_dalmt")
-region = Rect2(32, 64, 16, 16)
+region = Rect2(16, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_frf2j"]
 atlas = ExtResource("1_dalmt")
-region = Rect2(64, 64, 16, 16)
+region = Rect2(32, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n76y2"]
 atlas = ExtResource("1_dalmt")
-region = Rect2(96, 64, 16, 16)
+region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wpjfl"]
 atlas = ExtResource("1_dalmt")
@@ -138,16 +138,16 @@ region = Rect2(80, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vgqql")
+"texture": SubResource("AtlasTexture_timvc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f1ek2")
+"texture": SubResource("AtlasTexture_ctxol")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tx1dd")
+"texture": SubResource("AtlasTexture_frf2j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gymyn")
+"texture": SubResource("AtlasTexture_n76y2")
 }],
 "loop": false,
 "name": &"attack",

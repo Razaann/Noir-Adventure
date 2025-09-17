@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var health = 3
 @export var patrol_speed = 50.0
 @export var patrol_distance = 200.0
-@export var knockback_resistance = 0.8
+@export var knockback_resistance = 0.6
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var collision_shape = $CollisionShape2D

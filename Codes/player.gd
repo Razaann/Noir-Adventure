@@ -94,7 +94,7 @@ func _physics_process(delta):
 					player_anim.flip_h = true
 					slash_effect.flip_h = true
 					slash_effect.position.x = -16
-					sword_area.position.x = -30
+					sword_area.position.x = -32
 					velocity.x = direction * SPEED
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -119,10 +119,11 @@ func jump():
 # Attack handling
 
 func attack():
-	if is_on_floor() and not is_attack:
+	if not is_attack:
 		is_attack = true
 		player_anim.play("attack")
 		
+		# Need to fix the slash effect
 		# If i want the player slighty nudge after each attack
 		#var dir
 		#

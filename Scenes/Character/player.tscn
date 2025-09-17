@@ -6,36 +6,36 @@
 [ext_resource type="AudioStream" uid="uid://fqykq2oqlpr4" path="res://Assets/Sound/Jump.wav" id="4_vgqql"]
 [ext_resource type="AudioStream" uid="uid://d0x3437cxlpgv" path="res://Assets/Sound/attack.wav" id="5_fkybt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw006"]
 atlas = ExtResource("2_vgqql")
-region = Rect2(16, 64, 16, 16)
+region = Rect2(0, 224, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggc2y"]
 atlas = ExtResource("2_vgqql")
-region = Rect2(48, 64, 16, 16)
+region = Rect2(16, 224, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgx5c"]
 atlas = ExtResource("2_vgqql")
-region = Rect2(80, 64, 16, 16)
+region = Rect2(32, 224, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vj83"]
 atlas = ExtResource("2_vgqql")
-region = Rect2(112, 64, 16, 16)
+region = Rect2(48, 224, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fd4e3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pu2lt")
+"texture": SubResource("AtlasTexture_vw006")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ukyrk")
+"texture": SubResource("AtlasTexture_ggc2y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7dp3o")
+"texture": SubResource("AtlasTexture_vgx5c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h4iuc")
+"texture": SubResource("AtlasTexture_6vj83")
 }],
 "loop": false,
 "name": &"attack",
@@ -47,7 +47,7 @@ radius = 5.0
 height = 16.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni73s"]
-size = Vector2(16, 16)
+size = Vector2(8, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
 size = Vector2(12, 16)
@@ -74,11 +74,10 @@ position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_tx1dd")
 
 [node name="SwordArea" type="Area2D" parent="." groups=["enemies"]]
-metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="SwordCol" type="CollisionShape2D" parent="SwordArea"]
-position = Vector2(15, -8)
+position = Vector2(16, -8)
 shape = SubResource("RectangleShape2D_ni73s")
 debug_color = Color(0.776056, 0.140232, 1, 0.42)
 
