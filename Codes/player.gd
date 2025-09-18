@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 const SPEED = 75.0
-const JUMP_VELOCITY = -250.0 # -250
+const JUMP_VELOCITY = -250.0
 @export var attack_damage = 1
 @export var attack_knockback_force = 200.0
-@export var player_knockback_force = 70.0
+@export var player_knockback_force = 120.0  # Increased for better feel
 @export var max_health = 3
 
 # Nodes
@@ -36,10 +36,15 @@ var tween: Tween
 var current_health: int
 var is_dead = false
 
-# Knockback
+# Improved knockback system
 var is_knocked_back = false
+var knockback_velocity = Vector2.ZERO
 var knockback_timer = 0.0
-var knockback_duration = 0.3
+var knockback_duration = 0.4  # Slightly longer for better feel
+var knockback_friction = 500.0  # How quickly knockback decays
+var i_frames_timer = 0.0
+var i_frames_duration = 1.0  # Invincibility frames after taking damage
+var is_invulnerable = false
 
 func _ready():
 	sword_col.disabled = true
@@ -47,8 +52,17 @@ func _ready():
 
 func _physics_process(delta):
 	if is_dead:
-		move_and_slide() # still allow gravity to pull down
+		move_and_slide()
 		return
+	
+	# Handle invincibility frames
+	if is_invulnerable:
+		i_frames_timer -= delta
+		# Visual feedback - flicker sprite
+		player_anim.modulate.a = 0.5 + 0.5 * sin(i_frames_timer * 20)
+		if i_frames_timer <= 0:
+			is_invulnerable = false
+			player_anim.modulate.a = 1.0
 	
 	var direction = Input.get_axis("move_left", "move_right")
 	
@@ -56,91 +70,78 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	# Knockback
+	# Handle knockback
 	if is_knocked_back:
 		knockback_timer -= delta
-		if knockback_timer <= 0:
+		
+		# Apply knockback velocity with friction
+		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, knockback_friction * delta)
+		velocity.x = knockback_velocity.x
+		
+		# Allow some air control during knockback
+		if not is_on_floor() and direction != 0:
+			velocity.x += direction * SPEED * 0.3 * delta
+		
+		if knockback_timer <= 0 or (is_on_floor() and abs(knockback_velocity.x) < 10):
 			is_knocked_back = false
+			knockback_velocity = Vector2.ZERO
 	else:
-		# Animation & jump
+		# Normal movement and actions
 		set_animation(direction)
 		jump()
-		
-		# Dash
-		if Input.is_action_just_pressed("dash") and can_dash:
-			dash_sfx.play()
-			if player_anim.flip_h:
-				dashDirection = -1 
-			else:
-				dashDirection = 1
-			
-			is_dash = true
-			can_dash = false
-			dash_duration.start()
-			dash_cooldown.start(1.0)
-		
-		if is_dash:
-			velocity.x = dashDirection * (SPEED * 1.5) * 2
-			velocity.y = 0
-		elif is_attack:
-			velocity.x = 0
-		else:
-			if direction:
-				if direction > 0:
-					player_anim.flip_h = false
-					slash_effect.flip_h = false
-					slash_effect.position.x = 16
-					sword_area.position.x = 0
-					velocity.x = direction * SPEED
-				elif direction < 0:
-					player_anim.flip_h = true
-					slash_effect.flip_h = true
-					slash_effect.position.x = -16
-					sword_area.position.x = -32
-					velocity.x = direction * SPEED
-			else:
-				velocity.x = move_toward(velocity.x, 0, SPEED)
-		
-		# Attack
-		if Input.is_action_just_pressed("attack") and not is_attack:
-			attack()
+		handle_dash(direction)
+		handle_movement(direction)
+		handle_attack()
 	
 	move_and_slide()
 
-# Jump handling
+func handle_dash(direction):
+	if Input.is_action_just_pressed("dash") and can_dash and not is_knocked_back:
+		dash_sfx.play()
+		dashDirection = -1 if player_anim.flip_h else 1
+		
+		is_dash = true
+		can_dash = false
+		dash_duration.start()
+		dash_cooldown.start(1.0)
+
+func handle_movement(direction):
+	if is_dash:
+		velocity.x = dashDirection * (SPEED * 3.0)  # Improved dash speed
+		velocity.y = 0
+	elif is_attack:
+		# Allow slight movement during attack
+		velocity.x = move_toward(velocity.x, direction * SPEED * 0.3, SPEED * 2)
+	else:
+		if direction:
+			# Update sprite direction
+			player_anim.flip_h = direction < 0
+			slash_effect.flip_h = direction < 0
+			slash_effect.position.x = 16 if direction > 0 else -16
+			sword_area.position.x = 0 if direction > 0 else -32
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+
+func handle_attack():
+	if Input.is_action_just_pressed("attack") and not is_attack and not is_knocked_back:
+		attack()
+
 func jump():
 	if is_on_floor():
 		jumps_left = 2
 	
 	if jumps_left > 0 and velocity.y >= 0.0:
-		if Input.is_action_just_pressed("jump"):
+		if Input.is_action_just_pressed("jump") and not is_knocked_back:
 			jump_sfx.play()
 			velocity.y = JUMP_VELOCITY
-			jumps_left -= 1 
-
-# Attack handling
+			jumps_left -= 1
 
 func attack():
 	if not is_attack:
 		is_attack = true
 		player_anim.play("attack")
 		
-		# Need to fix the slash effect
-		# If i want the player slighty nudge after each attack
-		#var dir
-		#
-		#if player_anim.flip_h == false :
-			#dir = 1
-		#else:
-			#dir = -1
-			#
-		#var offset = 8 * dir   # lunge distance in px
-		#
-		## tween a quick step forward
-		#tween = get_tree().create_tween()
-		#tween.tween_property(self, "position:x", position.x + offset, 0.1)
-		
-		# restart slash effect
 		slash_effect.visible = true
 		slash_effect.stop()
 		slash_effect.play("attack")
@@ -156,8 +157,6 @@ func attack():
 		sword_col.disabled = true
 		is_attack = false
 
-
-# Animations
 func set_animation(direction):
 	if is_dead:
 		player_anim.play("death")
@@ -201,43 +200,45 @@ func _on_sword_area_body_entered(body):
 
 # Detect enemy body collision (player takes damage)
 func _on_detect_area_body_entered(body):
-	if body.has_method("is_enemy") and body.is_enemy():
+	if body.has_method("is_enemy") and body.is_enemy() and not is_invulnerable:
 		var knockback_direction = (global_position - body.global_position).normalized()
 		take_damage(1, knockback_direction)
 
-# Player takes damage
+# Improved player damage system
 func take_damage(amount: int, knockback_direction: Vector2):
-	if is_knocked_back or is_dead:
+	if is_invulnerable or is_dead:
 		return
 	
 	current_health -= amount
 	print("Player health: ", current_health)
 	
 	if current_health > 0:
-		# Knockback
+		# Start invincibility frames
+		is_invulnerable = true
+		i_frames_timer = i_frames_duration
+		
+		# Apply knockback
 		is_knocked_back = true
 		knockback_timer = knockback_duration
-		velocity.x = knockback_direction.x * player_knockback_force
-		velocity.y = -150 # small upward knockback
+		
+		# Improved knockback calculation
+		var knockback_strength = player_knockback_force
+		if is_on_floor():
+			knockback_velocity.x = knockback_direction.x * knockback_strength
+			knockback_velocity.y = -100  # Small upward boost
+		else:
+			# Stronger knockback in air
+			knockback_velocity.x = knockback_direction.x * knockback_strength * 1.2
+			knockback_velocity.y = knockback_direction.y * knockback_strength * 0.5
 	else:
-		die(knockback_direction)
+		die()
 
-# Death handling
-func die(knockback_direction: Vector2):
+func die():
 	is_dead = true
 	velocity = Vector2.ZERO
 	player_anim.play("death")
 	player_collision.queue_free()
 	
-	# Knockback effect on death
-	is_knocked_back = true
-	knockback_timer = knockback_duration
-	velocity.x = knockback_direction.x * player_knockback_force
-	velocity.y = -100
-	
-	# Slow Mo & reload scene
-	Engine.time_scale = 0.5
 	await get_tree().create_timer(0.5).timeout
-	Engine.time_scale = 1.0
 	await player_anim.animation_finished
 	get_tree().change_scene_to_file("res://Scenes/Level/game_over.tscn")
