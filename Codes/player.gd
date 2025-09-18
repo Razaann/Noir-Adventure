@@ -3,8 +3,8 @@ extends CharacterBody2D
 const SPEED = 75.0
 const JUMP_VELOCITY = -250.0 # -250
 @export var attack_damage = 1
-@export var attack_knockback_force = 300.0
-@export var player_knockback_force = 200.0
+@export var attack_knockback_force = 200.0
+@export var player_knockback_force = 70.0
 @export var max_health = 3
 
 # Nodes
@@ -16,6 +16,7 @@ const JUMP_VELOCITY = -250.0 # -250
 @onready var sword_col = $SwordArea/SwordCol
 @onready var jump_sfx = $JumpSFX
 @onready var attack_sfx = $AttackSFX
+@onready var dash_sfx = $DashSFX
 @onready var player_collision = $PlayerCol
 @onready var detection_area = $DetectArea
 
@@ -67,6 +68,7 @@ func _physics_process(delta):
 		
 		# Dash
 		if Input.is_action_just_pressed("dash") and can_dash:
+			dash_sfx.play()
 			if player_anim.flip_h:
 				dashDirection = -1 
 			else:
@@ -237,4 +239,5 @@ func die(knockback_direction: Vector2):
 	Engine.time_scale = 0.5
 	await get_tree().create_timer(0.5).timeout
 	Engine.time_scale = 1.0
-	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	await player_anim.animation_finished
+	get_tree().change_scene_to_file("res://Scenes/Level/game_over.tscn")

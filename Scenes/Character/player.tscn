@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c7cqxasj1xdtp"]
+[gd_scene load_steps=15 format=3 uid="uid://c7cqxasj1xdtp"]
 
 [ext_resource type="Script" uid="uid://cfh0mobad77ud" path="res://Codes/player.gd" id="1_ni73s"]
 [ext_resource type="SpriteFrames" uid="uid://bsw2axaxqmuly" path="res://Scenes/Object/PlayerAnimHood.tres" id="2_fkybt"]
 [ext_resource type="Texture2D" uid="uid://chmnidp7xjaes" path="res://Assets/Sprite/MetroidvaniaAsset/Char/herochar_spritesheet(new).png" id="2_vgqql"]
 [ext_resource type="AudioStream" uid="uid://fqykq2oqlpr4" path="res://Assets/Sound/Jump.wav" id="4_vgqql"]
 [ext_resource type="AudioStream" uid="uid://d0x3437cxlpgv" path="res://Assets/Sound/attack.wav" id="5_fkybt"]
+[ext_resource type="AudioStream" uid="uid://dtwy4buhlgnka" path="res://Assets/Sound/dash.wav" id="6_ggc2y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vw006"]
 atlas = ExtResource("2_vgqql")
@@ -102,6 +103,9 @@ volume_db = 5.0
 [node name="AttackSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_fkybt")
 volume_db = 3.0
+
+[node name="DashSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ggc2y")
 
 [connection signal="body_entered" from="SwordArea" to="." method="_on_sword_area_body_entered"]
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
