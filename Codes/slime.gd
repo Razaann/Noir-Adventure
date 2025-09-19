@@ -1,8 +1,10 @@
+# Old script for the enemy, new script for the player
+
 extends CharacterBody2D
 
 @export var health = 3
 @export var patrol_speed = 50.0
-@export var patrol_distance = 200.0
+@export var patrol_distance = 100.0
 
 # Knockback tuning
 @export var knockback_resistance = 0.3
@@ -29,7 +31,7 @@ var right_limit: float
 func _ready():
 	start_position = global_position
 	left_limit = start_position.x - patrol_distance / 2
-	right_limit = start_position.x + patrol_distance / 2	
+	right_limit = start_position.x + patrol_distance / 2
 	detection_area.body_entered.connect(_on_detection_area_body_entered)
 
 

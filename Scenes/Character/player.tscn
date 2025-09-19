@@ -96,16 +96,23 @@ one_shot = true
 
 [node name="DashCooldown" type="Timer" parent="."]
 
-[node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
+[node name="Node" type="Node" parent="."]
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="Node"]
 stream = ExtResource("4_vgqql")
 volume_db = 5.0
 
-[node name="AttackSFX" type="AudioStreamPlayer2D" parent="."]
+[node name="AttackSFX" type="AudioStreamPlayer2D" parent="Node"]
 stream = ExtResource("5_fkybt")
 volume_db = 3.0
 
-[node name="DashSFX" type="AudioStreamPlayer2D" parent="."]
+[node name="DashSFX" type="AudioStreamPlayer2D" parent="Node"]
 stream = ExtResource("6_ggc2y")
+volume_db = 5.0
+
+[node name="HurtSFX" type="AudioStreamPlayer2D" parent="Node"]
+
+[node name="DeadSFX" type="AudioStreamPlayer2D" parent="Node"]
 
 [connection signal="body_entered" from="SwordArea" to="." method="_on_sword_area_body_entered"]
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]

@@ -14,11 +14,15 @@ const JUMP_VELOCITY = -250.0
 @onready var dash_cooldown = $DashCooldown
 @onready var sword_area = $SwordArea
 @onready var sword_col = $SwordArea/SwordCol
-@onready var jump_sfx = $JumpSFX
-@onready var attack_sfx = $AttackSFX
-@onready var dash_sfx = $DashSFX
 @onready var player_collision = $PlayerCol
 @onready var detection_area = $DetectArea
+
+# SFX
+@onready var jump_sfx = $Node/JumpSFX
+@onready var attack_sfx = $Node/AttackSFX
+@onready var dash_sfx = $Node/DashSFX
+@onready var hurt_sfx = $Node/HurtSFX
+@onready var dead_sfx = $Node/DeadSFX
 
 # For dash
 var is_dash = false
@@ -89,13 +93,13 @@ func _physics_process(delta):
 		# Normal movement and actions
 		set_animation(direction)
 		jump()
-		handle_dash(direction)
+		handle_dash()
 		handle_movement(direction)
 		handle_attack()
 	
 	move_and_slide()
 
-func handle_dash(direction):
+func handle_dash():
 	if Input.is_action_just_pressed("dash") and can_dash and not is_knocked_back:
 		dash_sfx.play()
 		dashDirection = -1 if player_anim.flip_h else 1
