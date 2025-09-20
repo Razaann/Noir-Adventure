@@ -74,6 +74,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	# Handle one way platfrom
+	if Input.is_action_pressed("down"):
+		position.y += 1
+	
 	# Handle knockback
 	if is_knocked_back:
 		knockback_timer -= delta
