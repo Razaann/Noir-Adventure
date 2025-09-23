@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=4 uid="uid://63dqj1imveo5"]
+
+[ext_resource type="TileSet" uid="uid://cs318rfppktfn" path="res://Scenes/Object/level_tile.tres" id="1_xgn08"]
+[ext_resource type="PackedScene" uid="uid://bj2ty6mtncpn2" path="res://Scenes/Object/one_way_platfrom.tscn" id="2_knxya"]
+[ext_resource type="Texture2D" uid="uid://b4i750t17e5jb" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/wood_slab_left.png" id="3_gd4xb"]
+[ext_resource type="Texture2D" uid="uid://b00ybv51n6skm" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/wood_slab_right.png" id="4_eh5w8"]
+[ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/Object/killzone.tscn" id="5_gd4xb"]
+[ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/Character/player.tscn" id="6_eh5w8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eh5w8"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAHAAMAAQABAAAAAAAGAAMAAQABAAAAAAAFAAMAAQADAAIAAAAFAAIAAQACAAAAAAAEAAEAAQACAAAAAAADAAEAAQAAAAAAAAADAAIAAQAAAAEAAAADAAMAAQAAAAEAAAD//wMAAQACAAEAAAD//wIAAQACAAEAAAD//wEAAQACAAAAAAD+/wEAAQABAAAAAAD9/wEAAQABAAAAAAD8/wEAAQABAAAAAAD7/wEAAQABAAAAAAD6/wEAAQABAAAAAAD5/wEAAQABAAAAAAD4/wEAAQABAAAAAAD///3/AQACAAIAAAD///z/AQACAAEAAAD///v/AQACAAEAAAD4//3/AQABAAIAAAD5//3/AQABAAIAAAD6//3/AQABAAIAAAD7//3/AQABAAIAAAD8//3/AQABAAIAAAD9//3/AQABAAIAAAD+//3/AQABAAIAAAA=")
+tile_set = ExtResource("1_xgn08")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -8)
+zoom = Vector2(2.5, 2.5)
+
+[node name="1WayPlatfrom" type="Node" parent="."]
+
+[node name="OneWayPlatfrom" parent="1WayPlatfrom" instance=ExtResource("2_knxya")]
+position = Vector2(24, 56)
+
+[node name="OneWayPlatfrom2" parent="1WayPlatfrom" instance=ExtResource("2_knxya")]
+position = Vector2(8, 56)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="1WayPlatfrom/OneWayPlatfrom2" index="0"]
+texture = ExtResource("3_gd4xb")
+
+[node name="OneWayPlatfrom3" parent="1WayPlatfrom" instance=ExtResource("2_knxya")]
+position = Vector2(40, 56)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="1WayPlatfrom/OneWayPlatfrom3" index="0"]
+texture = ExtResource("4_eh5w8")
+
+[node name="Killzone" parent="." instance=ExtResource("5_gd4xb")]
+position = Vector2(0, 128)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_eh5w8")
+
+[node name="Player" parent="." instance=ExtResource("6_eh5w8")]
+position = Vector2(120, 48)
+
+[editable path="1WayPlatfrom/OneWayPlatfrom2"]
+[editable path="1WayPlatfrom/OneWayPlatfrom3"]
