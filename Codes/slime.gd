@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export var health = 3
 @export var patrol_speed = 50.0
-@export var patrol_distance = 100.0
+@export var patrol_distance = 50.0
 
 # Knockback tuning
 @export var knockback_resistance = 0.3
