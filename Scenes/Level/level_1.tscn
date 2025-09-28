@@ -46,10 +46,6 @@ shape = SubResource("RectangleShape2D_knogg")
 position = Vector2(-24, 48)
 
 [node name="Transitionn" parent="." instance=ExtResource("6_uoico")]
-offset_left = -128.0
-offset_top = -80.0
-offset_right = -88.0
-offset_bottom = -40.0
 metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Transition" to="." method="_on_transition_body_entered"]

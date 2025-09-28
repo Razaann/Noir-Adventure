@@ -4,7 +4,7 @@ const SPEED = 75.0
 const JUMP_VELOCITY = -250.0
 @export var attack_damage = 1
 @export var attack_knockback_force = 200.0
-@export var player_knockback_force = 120.0  # Increased for better feel
+@export var player_knockback_force = 120.0
 @export var max_health = 3
 
 # Nodes
@@ -44,15 +44,22 @@ var is_dead = false
 var is_knocked_back = false
 var knockback_velocity = Vector2.ZERO
 var knockback_timer = 0.0
-var knockback_duration = 0.4  # Slightly longer for better feel
-var knockback_friction = 500.0  # How quickly knockback decays
+var knockback_duration = 0.4
+var knockback_friction = 500.0
 var i_frames_timer = 0.0
-var i_frames_duration = 1.0  # Invincibility frames after taking damage
+var i_frames_duration = 1.0
 var is_invulnerable = false
+
+# ADDED: This variable controls whether the player can perform any action.
+var can_act: bool = false
 
 func _ready():
 	sword_col.disabled = true
 	current_health = max_health
+	
+	# ADDED: Wait for 1 second when the player spawns, then enable actions.
+	await get_tree().create_timer(1.0).timeout
+	can_act = true
 
 func _physics_process(delta):
 	if is_dead:
@@ -96,10 +103,13 @@ func _physics_process(delta):
 	else:
 		# Normal movement and actions
 		set_animation(direction)
-		jump()
-		handle_dash()
-		handle_movement(direction)
-		handle_attack()
+		
+		# ADDED: Check if the player is allowed to act before processing input.
+		if can_act:
+			jump()
+			handle_dash()
+			handle_movement(direction)
+			handle_attack()
 	
 	move_and_slide()
 
@@ -115,7 +125,7 @@ func handle_dash():
 
 func handle_movement(direction):
 	if is_dash:
-		velocity.x = dashDirection * (SPEED * 3.0)  # Improved dash speed
+		velocity.x = dashDirection * (SPEED * 3.0)
 		velocity.y = 0
 	elif is_attack:
 		# Allow slight movement during attack
@@ -229,11 +239,10 @@ func take_damage(amount: int, knockback_direction: Vector2):
 		is_knocked_back = true
 		knockback_timer = knockback_duration
 		
-		# Improved knockback calculation
 		var knockback_strength = player_knockback_force
 		if is_on_floor():
 			knockback_velocity.x = knockback_direction.x * knockback_strength
-			knockback_velocity.y = -100  # Small upward boost
+			knockback_velocity.y = -100
 		else:
 			# Stronger knockback in air
 			knockback_velocity.x = knockback_direction.x * knockback_strength * 1.2

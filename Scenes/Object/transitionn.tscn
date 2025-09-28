@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhqmnocl8jigp"]
+[gd_scene load_steps=9 format=3 uid="uid://dhqmnocl8jigp"]
 
 [ext_resource type="Script" uid="uid://d2v4doqdphqfr" path="res://Codes/transitionn.gd" id="1_k8yxu"]
 [ext_resource type="Shader" uid="uid://d1tr26ahjqmjc" path="res://Scenes/Object/transitionn.gdshader" id="1_r58e5"]
@@ -9,22 +9,6 @@ shader_parameter/spacing = 10.0
 shader_parameter/animation_progress = 0.0
 shader_parameter/dot_size = 1.0
 shader_parameter/dot_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_lll8f"]
-resource_name = "in"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:material:shader_parameter/animation_progress")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
 
 [sub_resource type="Animation" id="Animation_4weqk"]
 length = 0.001
@@ -52,9 +36,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
-[sub_resource type="Animation" id="Animation_psn0f"]
-resource_name = "out"
+[sub_resource type="Animation" id="Animation_lll8f"]
+resource_name = "in"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -66,6 +62,21 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_psn0f"]
+resource_name = "out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/animation_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
 "values": [1.0, 0.0]
 }
 tracks/1/type = "value"
@@ -75,17 +86,33 @@ tracks/1/path = NodePath(".:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_k8yxu"]
+resource_name = "outt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eutwr"]
 _data = {
 &"RESET": SubResource("Animation_4weqk"),
 &"in": SubResource("Animation_lll8f"),
-&"out": SubResource("Animation_psn0f")
+&"out": SubResource("Animation_psn0f"),
+&"outt": SubResource("Animation_k8yxu")
 }
 
 [node name="Transitionn" type="Control"]
