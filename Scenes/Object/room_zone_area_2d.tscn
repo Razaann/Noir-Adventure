@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ketdy18w0pqa"]
+
+[ext_resource type="Script" uid="uid://o8pirnkcaxjq" path="res://Codes/room_zone_area_2d.gd" id="1_pq4rr"]
+
+[node name="RoomZoneArea2D" type="Area2D"]
+script = ExtResource("1_pq4rr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

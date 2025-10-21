@@ -1,14 +1,14 @@
+CollisionShape2D
+RoomZoneArea2D
+Camera2D
+Area2D
 TileMapLayer
 Node
 AnimationPlayer
 ColorRect
 Control
-Camera2D
-CollisionShape2D
 Sprite2D
 StaticBody2D
 CanvasLayer
 AudioStreamPlayer2D      - Matches the "sfx" keyword.
 AudioStreamPlayer2D
-Area2D
-Button

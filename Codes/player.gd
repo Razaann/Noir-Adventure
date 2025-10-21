@@ -58,7 +58,7 @@ func _ready():
 	current_health = max_health
 	
 	# ADDED: Wait for 1 second when the player spawns, then enable actions.
-	await get_tree().create_timer(1.0).timeout
+	#await get_tree().create_timer(1.0).timeout
 	can_act = true
 
 func _physics_process(delta):

@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://dao5dvwjib0ja"]
+[gd_scene load_steps=9 format=4 uid="uid://dao5dvwjib0ja"]
 
-[ext_resource type="Script" uid="uid://cko24ne7r3teg" path="res://Codes/level_debug.gd" id="1_bpxlc"]
 [ext_resource type="TileSet" uid="uid://cs318rfppktfn" path="res://Scenes/Object/level_tile.tres" id="1_hit0p"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/Character/player.tscn" id="2_bpxlc"]
 [ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/Object/killzone.tscn" id="3_7rx2r"]
 [ext_resource type="PackedScene" uid="uid://bj2ty6mtncpn2" path="res://Scenes/Object/one_way_platfrom.tscn" id="5_7rx2r"]
 [ext_resource type="Texture2D" uid="uid://b4i750t17e5jb" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/wood_slab_left.png" id="6_2h1ja"]
 [ext_resource type="Texture2D" uid="uid://b00ybv51n6skm" path="res://Assets/Sprite/MetroidvaniaAsset/Tiles/wood_slab_right.png" id="7_5063g"]
-[ext_resource type="PackedScene" uid="uid://dhqmnocl8jigp" path="res://Scenes/Object/transitionn.tscn" id="8_5063g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s8nj6"]
 
@@ -15,7 +13,6 @@
 size = Vector2(16, 104)
 
 [node name="LevelDebug" type="Node2D"]
-script = ExtResource("1_bpxlc")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD9/wAAAQAAAAAAAAD9/wEAAQAAAAEAAAD+/wAAAQACAAAAAAD+/wEAAQACAAEAAAABAAAAAQAAAAAAAAABAAEAAQAAAAEAAAACAAAAAQACAAAAAAACAAEAAQACAAEAAAD4/wMAAQABAAAAAAD5/wMAAQABAAAAAAD6/wMAAQABAAAAAAD7/wMAAQABAAAAAAD8/wMAAQABAAAAAAD9/wIAAQAAAAEAAAD9/wMAAQAFAAIAAAD+/wIAAQACAAEAAAD+/wMAAQADAAIAAAD//wMAAQABAAAAAAAAAAMAAQABAAAAAAABAAIAAQAAAAEAAAABAAMAAQAFAAIAAAACAAIAAQACAAEAAAACAAMAAQADAAIAAAADAAMAAQABAAAAAAAEAAMAAQABAAAAAAAFAAMAAQABAAAAAAAGAAMAAQABAAAAAAAHAAMAAQACAAAAAAA=")
@@ -58,9 +55,6 @@ position = Vector2(8, 8)
 
 [node name="Sprite2D" parent="Platfroms/OneWayPlatfrom2" index="0"]
 texture = ExtResource("7_5063g")
-
-[node name="Transitionn" parent="." instance=ExtResource("8_5063g")]
-metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Transition" to="." method="_on_transition_body_entered"]
 

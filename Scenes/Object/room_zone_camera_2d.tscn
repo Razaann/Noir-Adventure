@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd4odcc1poyl4"]
+
+[ext_resource type="Script" uid="uid://c1cwj5hbx1dk5" path="res://Codes/room_zone_camera_2d.gd" id="1_6xsjf"]
+
+[node name="RoomZoneCamera2D" type="Camera2D"]
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("1_6xsjf")

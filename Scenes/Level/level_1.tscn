@@ -1,26 +1,32 @@
 [gd_scene load_steps=9 format=4 uid="uid://blyrcljrr6ncm"]
 
 [ext_resource type="TileSet" uid="uid://cs318rfppktfn" path="res://Scenes/Object/level_tile.tres" id="1_m5hwo"]
-[ext_resource type="Script" uid="uid://dklfb5w6w5ici" path="res://Codes/level_1.gd" id="1_wtlyx"]
 [ext_resource type="PackedScene" uid="uid://c7cqxasj1xdtp" path="res://Scenes/Character/player.tscn" id="2_wtlyx"]
 [ext_resource type="PackedScene" uid="uid://bu66bw8nvaure" path="res://Scenes/Object/killzone.tscn" id="3_knogg"]
-[ext_resource type="PackedScene" uid="uid://t04akogpawxn" path="res://Scenes/Character/slime.tscn" id="5_knogg"]
-[ext_resource type="PackedScene" uid="uid://dhqmnocl8jigp" path="res://Scenes/Object/transitionn.tscn" id="6_uoico"]
+[ext_resource type="PackedScene" uid="uid://ketdy18w0pqa" path="res://Scenes/Object/room_zone_area_2d.tscn" id="6_4snqv"]
+[ext_resource type="PackedScene" uid="uid://bd4odcc1poyl4" path="res://Scenes/Object/room_zone_camera_2d.tscn" id="6_uoico"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7p6j4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c458c"]
+size = Vector2(16, 32)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knogg"]
-size = Vector2(16, 80)
+size = Vector2(16, 32)
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_wtlyx")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD+/wMAAQABAAAAAAD//wMAAQABAAAAAAAAAAMAAQABAAAAAAABAAMAAQABAAAAAAD4/wMAAQABAAAAAAD5/wMAAQABAAAAAAD6/wMAAQABAAAAAAD7/wMAAQABAAAAAAD8/wMAAQABAAAAAAD9/wMAAQABAAAAAAACAAMAAQABAAAAAAADAAMAAQABAAAAAAAEAAMAAQABAAAAAAAFAAMAAQABAAAAAAAGAAMAAQABAAAAAAAHAAMAAQABAAAAAAD4//v/AQABAAIAAAD5//v/AQABAAIAAAD6//v/AQABAAIAAAD7//v/AQABAAIAAAD8//v/AQABAAIAAAD9//v/AQABAAIAAAACAPv/AQABAAIAAAADAPv/AQABAAIAAAAEAPv/AQABAAIAAAAFAPv/AQABAAIAAAAGAPv/AQABAAIAAAAHAPv/AQAFAAAAAAD+//v/AQACAAIAAAABAPv/AQAAAAIAAAD3/wMAAQABAAAAAAD2/wMAAQABAAAAAAAIAAMAAQABAAAAAAAJAAMAAQABAAAAAAAHAAAAAQAAAAIAAAAHAP//AQAAAAEAAAAHAP7/AQAAAAEAAAAHAP3/AQAAAAEAAAAHAPz/AQAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD+/wMAAQABAAAAAAD//wMAAQABAAAAAAAAAAMAAQABAAAAAAABAAMAAQABAAAAAAD4/wMAAQABAAAAAAD5/wMAAQABAAAAAAD6/wMAAQABAAAAAAD7/wMAAQABAAAAAAD8/wMAAQABAAAAAAD9/wMAAQABAAAAAAACAAMAAQABAAAAAAADAAMAAQABAAAAAAAEAAMAAQABAAAAAAAFAAMAAQABAAAAAAAGAAMAAQABAAAAAAAHAAMAAQAFAAIAAAD4//v/AQADAAAAAAD5//v/AQABAAIAAAD6//v/AQABAAIAAAD7//v/AQABAAIAAAD8//v/AQABAAIAAAD9//v/AQABAAIAAAACAPv/AQABAAIAAAADAPv/AQABAAIAAAAEAPv/AQABAAIAAAAFAPv/AQABAAIAAAAGAPv/AQABAAIAAAAHAPv/AQAFAAAAAAD+//v/AQACAAIAAAABAPv/AQAAAAIAAAAHAAAAAQAAAAEAAAAHAP//AQAAAAEAAAAHAP7/AQAAAAEAAAAHAP3/AQAAAAEAAAAHAPz/AQAAAAEAAAAHAAEAAQAAAAEAAAAHAAIAAQAAAAEAAAD4/wAAAQACAAIAAAD4////AQACAAEAAAD4//7/AQACAAEAAAD4//3/AQACAAEAAAD4//z/AQACAAEAAADo//3/AQABAAIAAADo/wEAAQABAAAAAADp//3/AQABAAIAAADp/wEAAQABAAAAAADq//3/AQABAAIAAADq/wEAAQABAAAAAADr//3/AQABAAIAAADr/wEAAQABAAAAAADs//3/AQABAAIAAADs/wEAAQABAAAAAADt//3/AQABAAIAAADt/wEAAQABAAAAAADu//3/AQABAAIAAADu/wEAAQABAAAAAADv//v/AQACAAEAAADv//z/AQACAAEAAADv//3/AQACAAIAAADv/wEAAQACAAAAAADv/wIAAQACAAEAAADv/wMAAQACAAEAAADz/wEAAQAAAAAAAADz/wIAAQAAAAEAAADz/wMAAQAAAAEAAAD0/wEAAQACAAAAAAD1/wIAAQACAAAAAAD1/wMAAQADAAIAAAD2/wMAAQABAAAAAAD3/wMAAQABAAAAAAAUAA4AAQABAAQAAAAUAAYAAQABAAQAAAATAA4AAQABAAQAAAASAA4AAQABAAQAAAARAA4AAQABAAQAAAAQAA4AAQABAAQAAAAPAA4AAQABAAQAAAAOAA4AAQABAAQAAAANAA4AAQABAAQAAAAMAA4AAQABAAQAAAAMAA0AAQABAAQAAAAMAAwAAQABAAQAAAAMAAsAAQABAAQAAAAMAAoAAQABAAQAAAAMAAkAAQABAAQAAAAMAAgAAQABAAQAAAAMAAcAAQABAAQAAAAMAAYAAQABAAQAAAANAAYAAQABAAQAAAAOAAYAAQABAAQAAAAPAAYAAQABAAQAAAAQAAYAAQABAAQAAAARAAYAAQABAAQAAAASAAYAAQABAAQAAAATAAYAAQABAAQAAAAVAAYAAQABAAQAAAAWAAYAAQABAAQAAAAXAAYAAQABAAQAAAAYAAYAAQABAAQAAAAZAAYAAQABAAQAAAAaAAYAAQABAAQAAAAaAA4AAQABAAQAAAAZAA4AAQABAAQAAAAYAA4AAQABAAQAAAAXAA4AAQABAAQAAAAWAA4AAQABAAQAAAAVAA4AAQABAAQAAAAbAA4AAQABAAQAAAAbAA0AAQABAAQAAAAbAAwAAQABAAQAAAAbAAsAAQABAAQAAAAbAAoAAQABAAQAAAAbAAcAAQABAAQAAAAbAAYAAQABAAQAAAAbAAgAAQABAAQAAAAbAAkAAQABAAQAAAA=")
 tile_set = ExtResource("1_m5hwo")
 
+[node name="RoomZoneCamera2D" parent="." instance=ExtResource("6_uoico")]
+position = Vector2(0, -8)
+scale = Vector2(2.5, 2.5)
+zoom = Vector2(2.5, 2.5)
+
 [node name="Player" parent="." instance=ExtResource("2_wtlyx")]
-position = Vector2(120, 48)
+position = Vector2(0, -56)
 
 [node name="Killzone" parent="." instance=ExtResource("3_knogg")]
 position = Vector2(0, 128)
@@ -29,23 +35,21 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_7p6j4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -8)
+[node name="RoomZoneArea2D2" parent="." instance=ExtResource("6_4snqv")]
+position = Vector2(-120, 32)
 zoom = Vector2(2.5, 2.5)
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
+fixed_position = Vector2(0, -8)
+limit_camera = true
+metadata/_edit_group_ = true
 
-[node name="Transition" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomZoneArea2D2"]
+shape = SubResource("RectangleShape2D_c458c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Transition"]
-position = Vector2(144, 0)
+[node name="RoomZoneArea2D" parent="." instance=ExtResource("6_4snqv")]
+position = Vector2(-136, 32)
+zoom = Vector2(2.5, 2.5)
+fixed_position = Vector2(-256, -8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomZoneArea2D"]
 shape = SubResource("RectangleShape2D_knogg")
-
-[node name="Slime2" parent="." instance=ExtResource("5_knogg")]
-position = Vector2(-24, 48)
-
-[node name="Transitionn" parent="." instance=ExtResource("6_uoico")]
-metadata/_edit_lock_ = true
-
-[connection signal="body_entered" from="Transition" to="." method="_on_transition_body_entered"]
